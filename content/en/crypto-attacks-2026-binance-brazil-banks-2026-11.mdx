@@ -1,0 +1,226 @@
+---
+title: "Crypto attacks in 2026: from small scams to the possibly biggest theft in history"
+description: "From address-poisoning scams of a few thousand dollars to the $6.3 billion attack on Binance, a map of 2026's crypto attacks, what's known about who might be behind them, and the withdrawal blocks in Brazil."
+date: 2026-11-09
+lang: en
+translationKey: "ataques-cripto-2026-binance-brasil-2026-11"
+tags: [crypto, security, binance, brazil, hacks]
+draft: false
+---
+
+![Circles proportional to the value of five crypto attacks, from a $12 million address-poisoning scam to the $6.3 billion attack on Binance](/images/cripto-2026/capa-en.png)
+
+On October 29, 2026, Binance, the world's largest cryptocurrency exchange, had its hot wallets drained within a few hours. About $6.3 billion, according to the company itself, which, by the lists of attacks, puts it above anything ever recorded in the industry. The following week, here in Brazil, Mercado Bitcoin suspended withdrawals after a security incident, and Nubank and Mercado Pago stopped or restricted crypto transfers.
+
+This article puts the pieces together. First it shows the scale of 2026's attacks, from smallest to largest. Then it covers what's known about the Binance case, what happened with the withdrawal blocks in Brazil, and who might be behind it. For that last point there's one rule: **we only call someone the author of an attack if that person or group claimed responsibility.** When there's suspicion, it appears as suspicion, with the source and the level of confirmation.
+
+<Summary title="Quick summary">
+October 2026 was the worst month of the year for crypto attacks, with about $6.5 billion in gross losses according to PeckShield, almost all of it from Binance. Analysts link the case, and most of the year's losses, to North Korean hackers, but nobody has claimed responsibility and there are conflicting accounts. In Brazil, Mercado Bitcoin suffered an attack on its hot wallets ($40 to 49 million according to the press), and Nubank and Mercado Pago attributed their blocks to supplier failures. The companies say there is no loss to customers.
+</Summary>
+
+*Written on November 9, 2026. The cases are ongoing and numbers differ between sources.*
+
+## The year in numbers
+
+The numbers depend on who's counting. The main trackers differ because they use different cutoffs, valuations, and recovery assumptions.
+
+* **PeckShield:** 56 major attacks in October, with $6.48 billion in losses, versus $766 million in September. The 2026 cumulative total was about $8.6 billion on October 31, and the top ten incidents accounted for 92.3% of it. ([TechFlow](https://www.techflowpost.com/en-US/newsletter/142299))
+* **CertiK:** $6.5 billion in gross losses in October, but $3.03 billion frozen or returned, leaving $3.47 billion in adjusted losses. The year's gross total, about $9.2 billion, is described as a record. ([The Defiant](https://thedefiant.io/news/security/certik-puts-2026-crypto-losses-at-record-9-2-billion))
+* **DefiLlama:** $8.74 billion from January through October. Without Binance, October would drop to about $136 million. ([Cryptsy](https://cryptsy.com/crypto-hacks/))
+* **First half:** TRM Labs counted 207 attacks and about $972 million. CertiK said $1.32 billion.
+
+In other words: a single event explains most of the year. Without it, 2026 would be a relatively ordinary year. One source's analysis also points out that about 72% of the year's losses came from stolen keys and credentials, not from smart contract flaws.
+
+## From smallest to largest
+
+### Address poisoning
+
+It's the simplest scam: the criminal sends a minimal-value transaction from an address nearly identical to the victim's, hoping they'll copy the wrong address from their history. A Carnegie Mellon (CyLab) study covering 2022 to 2024 identified more than 270 million attempts, targeting over 17 million wallets. Individual cases can be huge: according to Scam Sniffer, one investor sent $12.25 million to a poisoned address in January 2026, and another lost $50 million the same way a month earlier. These numbers come from aggregated reports and should be checked against the original sources.
+
+### Phishing and wallet drainers
+
+In January, CertiK counted about $311 million drained by phishing, the highest monthly total in 11 months, according to Invezz's coverage. Scam Sniffer recorded $6.27 million in signature phishing that month, with 4,741 victims, and two wallets accounted for about 65% of that. Wallet drainers, programs that empty wallets after the victim signs something, stole about $84 million from some 106,000 users in 2025, an 83% drop from the 2024 peak of $494 million, according to the same company.
+
+### Physical attacks
+
+So-called "wrench attacks," in which the criminal threatens or assaults the crypto owner, are also growing. According to Chainalysis data cited by CoinLaw, the value stolen in violent attacks hit a record $58 million in 2025, and 2026 had already reached $30 million by mid-year.
+
+### Fraud and investment scams
+
+Outside of hacks, Chainalysis estimated about $17 billion stolen through crypto scams and fraud in 2025. These are different categories, and the totals shouldn't be added to those of attacks on protocols and exchanges.
+
+### Small and mid-sized protocols
+
+The first months of 2026 brought several attacks between $10 million and $36 million, according to incident lists:
+
+* **Truebit** (January 8): about $26 million.
+* **Step Finance** (January 31): between $27 and $30 million.
+* **Resolv Labs** (March 22): about $25 million.
+* **THORChain** (May 15): about $10.8 million, after a newly onboarded validator node exploited a weakness in the GG20 threshold-signature scheme.
+* **Humanity Protocol** (June): between $30 and $36 million, tied to a multisig setup where keys were backed up onto a single compromised laptop.
+
+### 2026's big ones
+
+![Chart of 2026's biggest attacks: Binance at $6.3 billion, Bitget $387 million, Liquid Network $320 million, KelpDAO $292 million, Drift $285 million, and Mercado Bitcoin between $40 and $49 million](/images/cripto-2026/maiores-en.png)
+
+*Estimated losses, in millions of dollars. Values vary by source.*
+
+* **Drift Protocol (April 1, about $285 million).** The Solana derivatives exchange was drained in about 12 minutes, with no code bug at all. According to [Chainalysis](https://www.chainalysis.com/blog/lessons-from-the-drift-hack/), the attackers used a Solana feature, durable nonces, to get security council members to pre-sign transactions without realizing it. [Nexus Mutual's](https://nexusmutual.io/blog/drift-protocol-incident-report) report describes months of groundwork, with false identities, in-person meetings with contributors, and a fake token accepted as collateral.
+* **KelpDAO (April 18, about $292 million).** A cross-chain bridge incident. According to the lists, 30,766 ETH were frozen by Arbitrum.
+* **Liquid Network (September, about $320 million).** A range-proof bug in Blockstream's Elements software allowed unbacked L-BTC to be minted and swapped for real Bitcoin.
+* **Bitget (September 24, about $387.5 million).** The loss was first estimated at $351.6 million and later revised. Chainalysis traced $387 million across 23 transfers in the first three hours. Bitget said it would cover the losses with its protection fund, valued at more than $464 million.
+
+### Binance, October 29
+
+The biggest case gets its own section below.
+
+### The history, for comparison
+
+Lists of the biggest attacks in history usually include, by value at the time: **Bybit** (February 2025, about $1.46 to 1.5 billion), **Ronin** (2022, between $540 and $625 million), **Poly Network** (2021, about $610 million), and **Mt. Gox**. Poly Network is a curious case: the attacker presented as "Mr. White Hat" and returned the funds, so the net loss was much smaller. The FTX case splits the lists, because some count the roughly $400 to 477 million drain in November 2022 and others count the shortfall from the collapse, over $8 billion, which was fraud and not a hack. The ranking changes depending on whether you count value at the time, today's value, or net loss after recovery.
+
+## Binance: what's known and what isn't
+
+### What's known
+
+* The attack began on the evening of October 29 and drained hot wallets across about ten blockchains. Between about 20:04 and 23:56 UTC, most of the money left in about 20 minutes, according to [Range](https://range.org/blog/binance-hot-wallet-hack) and other analyses.
+* Binance estimates about $6.3 billion. Other sources differ: Chainalysis says about $6.4 billion, DefiLlama $5.78 billion, and Blockaid $5.5 billion.
+* About $3 billion has been frozen so far, partly by stablecoin issuers.
+* Binance and Bitget said they will cover customers' losses from company funds. Bloomberg Línea reports that Binance was gradually restoring withdrawals for some assets, but that appears in a single source.
+
+### How it was done
+
+The preparation lasted at least 36 hours, with the code tested on two wallets before a final rehearsal on a third. On Ethereum, a wallet funded through Tornado Cash made a Binance hot wallet run its own contract through an EIP-7702 delegation, which requires a valid signature from the wallet. TRM Labs assesses that the attacker most likely managed to make Binance's hot-wallet signing system sign for it.
+
+The exact cause is still under analysis. Binance first pointed to a DevOps engineer's laptop, and a later update said investigators found additional points of breach. The company says there's no evidence of a private key leak. [Hacken](https://hacken.io/insights/binance-hack/) discusses whether it was a stolen key, a hijacked signer, or an EIP-7702 delegation, with no settled answer.
+
+## Brazil: the withdrawal blocks
+
+![Timeline of the week of the blocks in Brazil, from October 29 to November 9](/images/cripto-2026/brasil-en.png)
+
+*Key events, not to scale in time between them.*
+
+### Mercado Bitcoin (November 2)
+
+On November 2, the exchange reported a security incident, suspended deposits and withdrawals as a preventive measure, and stated in a notice that there was no loss to customers and no data leak. According to the company's own help center, the incident only hit the hot wallets, and most assets sit in offline cold wallets.
+
+The amount varies by source: [Bloomberg Línea](https://www.bloomberglinea.com.br/crypto/mercado-bitcoin-sofre-ataque-hacker-de-us-40-mi-mas-descarta-perdas-para-clientes/) says $40 million, [Cointelegraph Brasil](https://cointelegraph.com.br/news/mercado-bitcoin-hack) says more than $46 million, and another report says $49 million drained across 17 blockchains. On November 3, the company said it had blocked the equivalent of $12.9 million. It says it is replenishing the assets with its own funds. On Monday, November 9, the exchange began reopening view-only mode, with pre-incident balances. Deposits, withdrawals, transfers, and trading remain suspended, and Pix withdrawals, at first, only for accounts in the customer's own name and tax ID.
+
+### Nubank and Mercado Pago (November 6)
+
+On Friday, November 6, Nubank suspended crypto withdrawals and deposits on NuCripto, and Mercado Pago preventively blocked part of its transfers to external wallets. The official explanations were:
+
+* **Nubank:** instability at an external data supplier, which, according to the company, doesn't compromise customers' security. Buying and selling remained normal.
+* **Mercado Pago:** an incident at the company hired for risk monitoring and anti-money-laundering. Deposits could be delayed, and buying and selling kept working.
+
+According to [Paraíba Business](https://paraibabusiness.com.br/nubank-retoma-saques-de-cripto-apos-falha-em-fornecedor-externo-na-sexta-feira/), Nubank resumed withdrawals and deposits at 10 p.m. that same Friday. I found no confirmation that Mercado Pago released all transfers.
+
+### What isn't known
+
+* **Which supplier it is.** Neither company said which one failed. One report notes they didn't confirm whether it's Chainalysis, and there's no evidence of that.
+* **Whether the supplier was attacked.** The site Livecoins reported a rumor of a hacker attack on a provider. It's a rumor, and the companies talk about a failure or instability.
+* **Whether it's related to Binance or Mercado Bitcoin.** [Bloomberg Línea](https://www.bloomberglinea.com.br/crypto/nubank-e-mercado-pago-suspendem-transacoes-com-criptomoedas-apos-falhas-em-fornecedores/) notes that the suspension came a week after the Binance attack, and CNN Brasil says the move follows a wave of instability that hit exchanges throughout the week. That shows timing coincidence, not cause.
+* **Whether it has to do with Central Bank regulation.** No report I found ties the suspensions to the new rules.
+
+### The regulatory context
+
+Brazil is going through a rule change for the sector. Virtual asset service providers already operating on February 2, 2026 had until October 30 to file the first stage of their authorization request with the Central Bank, and those that don't must wind down and notify customers within 30 days. According to Finsiders, about 38 companies had applied two weeks earlier, and Itaú and Inter also formalized their activity in intermediation and custody. Companies incorporated abroad that served customers in Brazil have 270 days to migrate their operations. One of the summaries that circulated mentions a restriction on banks starting November 6, but it wasn't confirmed by other sources, so I don't treat it as fact.
+
+On custody, Mercado Pago holds crypto through Paxos, and Nubank Cripto also operates with Paxos, according to an older report.
+
+## Who might be responsible
+
+The rule bears repeating: we only treat someone as an author if they claimed responsibility. **In the cases below, I found no claim of responsibility.** What exists are attributions by analytics firms, which are assessments, not confessions.
+
+### Binance and Bitget
+
+Chainalysis attributes the Binance theft to the North Korean group TraderTraitor, based mainly on an on-chain link: funds stolen from Binance commingled with funds from the Bitget attack, which had already been tied to North Korean actors. TRM Labs says the same with "high confidence," citing similarities to the 2025 Bybit attack. According to [SecurityWeek](https://www.securityweek.com/6-billion-binance-hack-bears-hallmarks-of-north-koreas-tradertraitor/), the case bears that group's hallmarks. Binance hasn't named those responsible and says it's cooperating with authorities.
+
+There are open points. One source says the FBI attributed the theft to North Korea on October 31, but another notes that this hasn't been confirmed against an FBI statement. A third source reports that Kim Yo Jong denied any North Korean involvement on November 3, and other sources don't mention that denial. On Bitget, CEO Gracy Chen pointed to North Korean actors based on IP addresses matching a group's VPN choices, and Elliptic called the link "highly likely." None of this amounts to confirmation by an authority, and nobody has claimed responsibility.
+
+### Drift and the year's share
+
+TRM Labs and Chainalysis linked the Drift attack to North Korean hackers, also as an assessment. Chainalysis calculates that attacks linked to North Korea account for about 89% of 2026's hack losses, and TRM says about 85%. Since these are estimates by private companies, the percentages vary.
+
+### Brazil
+
+For Mercado Bitcoin, I found no attribution to any group. For Nubank and Mercado Pago, the companies talk about a supplier failure, and no attacker has been identified.
+
+### Who claims
+
+To give a sense of what "claiming" means: in Poly Network, in 2021, the attacker presented as "Mr. White Hat" and returned the funds. In the 2026 cases described above, there's nothing similar.
+
+## Myth or fact
+
+### "Binance went under and customers lost everything" — no evidence
+
+Binance says it will cover the losses from company funds, and Bitget did the same with its protection fund. About $3 billion was frozen. Trust is an open question, but nothing in the sources indicates loss to customers so far.
+
+### "Nubank and Mercado Pago were hacked" — not what the companies say
+
+Both attribute the problem to external suppliers. There's a rumor of an attack on a provider, which hasn't been confirmed.
+
+### "The banks blocked because of the Central Bank's new rule" — no evidence
+
+Nothing in the sources ties the suspensions to regulation. The date coincidence exists, but that's all it is.
+
+### "The biggest attacks come from smart contract flaws" — not always
+
+In 2026 several cases came from access and keys: Drift (pre-authorized signatures), Humanity Protocol (keys on a single laptop), and, apparently, Binance (TRM assesses that the signing system was taken over). One analysis calculates that 72% of the year's losses came from stolen keys and credentials.
+
+### "The numbers are settled" — no
+
+PeckShield, CertiK, and DefiLlama differ, and the same attack has different values by source, by criteria, and by recovery.
+
+## What you can conclude
+
+Crypto in 2026 has two stories. One is from the bottom: small, repeated scams, like poisoned addresses, phishing, and physical assaults, which add up to hundreds of millions and hurt ordinary people. The other is from the top: a few giant attacks, with months of preparation, against points where the money is concentrated, like admin keys and signing systems.
+
+In Brazil, what happened between November 2 and 9 shows well the distance between what's known and what's said. Mercado Bitcoin suffered an attack confirmed by the company itself, which says it is replenishing the assets. At Nubank and Mercado Pago, the stated cause is external, and anything beyond that is rumor.
+
+On who's behind it, the honest answer for now is that nobody has claimed responsibility, and that the attributions to North Korea are assessments by private companies, with conflicting versions of what the FBI and the North Korean government said. The situation changes every day, and this piece is a snapshot of November 9.
+
+## Sources
+
+**The year's totals**
+
+* [TechFlow: PeckShield, 56 attacks in October](https://www.techflowpost.com/en-US/newsletter/142299)
+* [The Defiant: CertiK, $9.2 billion in 2026](https://thedefiant.io/news/security/certik-puts-2026-crypto-losses-at-record-9-2-billion)
+* [Cryptsy: 2026 attacks by month](https://cryptsy.com/crypto-hacks/)
+* [FinanceFeeds: the 15 biggest attacks of the first half](https://financefeeds.com/15-biggest-crypto-blockchain-exploit-hacks-2026/)
+* [CoinCentral: 2026 crypto hack statistics](https://coincentral.com/crypto-hack-statistics-2026-biggest-heists-losses-and-attack-methods/)
+
+**Binance**
+
+* [Range: how the hot wallet theft worked](https://range.org/blog/binance-hot-wallet-hack)
+* [Hacken: stolen key, hijacked signer, or EIP-7702](https://hacken.io/insights/binance-hack/)
+* [SOCRadar: inside the $6.3 billion theft](https://socradar.io/blog/binance-hack-6-3b-hot-wallet-theft/)
+* [Chainalysis: the $6.4 billion theft and North Korea](https://www.chainalysis.com/blog/binance-exploit-latest-findings-and-response/)
+* [SecurityWeek: hallmarks of TraderTraitor](https://www.securityweek.com/6-billion-binance-hack-bears-hallmarks-of-north-koreas-tradertraitor/)
+* [Gizmodo: how $6.3 billion was stolen in minutes](https://gizmodo.com/how-hackers-stole-6-3-billion-from-binance-in-minutes-2000833158)
+
+**Other 2026 attacks**
+
+* [Chainalysis: lessons from the Drift hack](https://www.chainalysis.com/blog/lessons-from-the-drift-hack/)
+* [Nexus Mutual: Drift incident report](https://nexusmutual.io/blog/drift-protocol-incident-report)
+* [TRM Labs: North Korean hackers and Drift](https://www.trmlabs.com/resources/blog/north-korean-hackers-attack-drift-protocol-in-285-million-heist)
+* [Decrypt: Chainalysis and the Bitget trace](https://decrypt.co/380005/chainalysis-ai-87m-bitget-hack-north-korea)
+* [The Record: Bitget's CEO accuses North Korea](https://therecord.media/crypto-ceo-accuses-north-korea-of-387-million-theft)
+
+**Smaller scams**
+
+* [CoinLaw: phishing and drainer statistics](https://coinlaw.io/phishing-and-wallet-drainer-incidents-statistics/)
+* [NFT Plazas: crypto scam statistics 2026](https://nftplazas.com/crypto-scam-fraud-statistics-2026/)
+* [Chainalysis: 2026 Crypto Crime Report](https://www.chainalysis.com/blog/2026-crypto-crime-report-introduction/)
+
+**Brazil**
+
+* [Olhar Digital: Mercado Bitcoin suspends withdrawals](https://olhardigital.com.br/2026/11/02/seguranca/mercado-bitcoin-suspende-saques-apos-incidente-de-seguranca)
+* [Bloomberg Línea: Mercado Bitcoin suffers a $40 million attack](https://www.bloomberglinea.com.br/crypto/mercado-bitcoin-sofre-ataque-hacker-de-us-40-mi-mas-descarta-perdas-para-clientes/)
+* [Cointelegraph Brasil: Mercado Bitcoin transfers](https://cointelegraph.com.br/news/mercado-bitcoin-hack)
+* [Poder360: Nubank and Mercado Pago restrict crypto operations](https://www.poder360.com.br/poder-economia/nubank-e-mercado-pago-restringem-temporariamente-operacoes-com-cripto/)
+* [Bloomberg Línea: Nubank and Mercado Pago suspend transactions](https://www.bloomberglinea.com.br/crypto/nubank-e-mercado-pago-suspendem-transacoes-com-criptomoedas-apos-falhas-em-fornecedores/)
+* [Paraíba Business: Nubank resumes withdrawals](https://paraibabusiness.com.br/nubank-retoma-saques-de-cripto-apos-falha-em-fornecedor-externo-na-sexta-feira/)
+* [Metrópoles: why Nubank and Mercado Pago suspended](https://www.metropoles.com/brasil/entenda-por-que-nubank-e-mercado-pago-suspenderam-saques-de-cripto)
+* [Livecoins: the rumor of an attack on a provider](https://livecoins.com.br/mercado-pago-e-nubank-travam-saques-e-depositos-de-criptomoedas-com-rumor-de-ataque-hacker-em-provedor/)
+* [BPMoney: the October 30 deadline for providers](https://bpmoney.com.br/mercado/cripto/exchanges-sem-licenca-banco-central-prazo-30-outubro/)
+* [Finsiders: 38 companies apply for Central Bank authorization](https://finsidersbrasil.com.br/regulamentacao/licenca-para-cripto-38-empresas-pedem-autorizacao-ao-bc/)

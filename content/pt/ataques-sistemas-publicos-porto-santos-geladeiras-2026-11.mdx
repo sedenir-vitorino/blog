@@ -1,6 +1,6 @@
 ---
 title: "Porto de Santos e geladeiras hackeadas: o que é verdade sobre os ataques a sistemas públicos"
-description: "Verificamos o ataque ao Porto de Santos e as invasões a geladeiras e bancos de plasma na Europa: o que está confirmado, o que ainda é incerto, quem pode estar por trás e o que isso significa para o Brasil."
+description: "Verificamos o ataque ao Porto de Santos e as invasões a geladeiras e bancos de plasma na Europa: o que está confirmado, o que ainda é incerto, quem pode estar por trás e qual pode ter sido a falha."
 date: 2026-11-12
 lang: pt
 translationKey: "ataques-sistemas-publicos-santos-geladeiras-2026-11"
@@ -8,21 +8,21 @@ tags: [ciberseguranca, infraestrutura-critica, porto-de-santos, ataques-hacker]
 draft: false
 ---
 
-![Dois cartões: Porto de Santos, com ataque confirmado pela autoridade e causa em apuração, e geladeiras hackeadas, confirmadas na Europa e sem nenhum caso no Brasil](/images/infra-publica-2026/capa-pt.png)
+![Dois cartões: Porto de Santos, com ataque confirmado pela autoridade e causa em apuração, e geladeiras hackeadas, confirmadas na Europa em supermercados e bancos de plasma](/images/infra-publica-2026/capa-pt.png)
 
-Nas últimas semanas, duas notícias de ataque a sistemas de uso público começaram a circular juntas: o Porto de Santos, o maior da América Latina, fora do ar, e geladeiras de comida e de remédios sendo invadidas e aquecidas por hackers. Pelo caminho, versões se misturaram. Algumas pessoas passaram a falar em geladeiras de medicamentos hackeadas "aqui no Brasil", outras em um porto parado.
+Nas últimas semanas, duas notícias de ataque a sistemas de uso público começaram a circular juntas: o Porto de Santos, o maior da América Latina, fora do ar, e geladeiras de comida e de remédios sendo invadidas e aquecidas por hackers. Pelo caminho, as versões se misturaram, e algumas já falavam em um porto parado e em geladeiras de remédios invadidas.
 
 Fomos checar. Este artigo separa o que está confirmado do que é rumor, diz onde cada caso aconteceu e trata a questão de quem pode estar por trás com uma regra: **só chamamos alguém de autor de um ataque se essa pessoa ou grupo assumiu a autoria.** Quando há suspeita ou atribuição de governos e empresas, ela aparece como tal.
 
 <Summary title="Em resumo">
-O Porto de Santos confirmou um ataque cibernético, mas a causa e a extensão estão em apuração, e as operações, segundo a autoridade portuária, seguem funcionando. As geladeiras hackeadas são um caso europeu: supermercados na França e em outros países e, em 2 de novembro, câmaras frias de plasma do banco de sangue francês. Não encontrei geladeiras de medicamentos de farmácias ou hospitais atacadas, nem nenhum caso de geladeira no Brasil. A França atribuiu os ataques de outubro ao Irã, mas ninguém assumiu a autoria.
+O Porto de Santos confirmou um ataque cibernético, mas a causa e a extensão estão em apuração, e as operações, segundo a autoridade portuária, seguem funcionando. As geladeiras hackeadas são um caso europeu: supermercados na França e em outros países e, em 2 de novembro, câmaras frias de plasma do banco de sangue francês. Não encontrei geladeiras de medicamentos de farmácias ou hospitais atacadas. A França atribuiu os ataques de outubro ao Irã, mas ninguém assumiu a autoria. Sobre a falha: nas geladeiras, tudo aponta para controladores antigos, expostos à internet e com acesso fraco. No porto, a causa técnica ainda não foi divulgada, e a hipótese mais consistente é a de uma invasão anterior que passou despercebida.
 </Summary>
 
 *Texto escrito em 12 de novembro de 2026. Os casos estão em andamento e podem mudar.*
 
 ## O que está confirmado
 
-![Quadro com oito afirmações e o que as fontes sustentam: ataque ao Porto de Santos parcial, grupo que assumiu sem confirmação, geladeiras de supermercados e bancos de plasma confirmados, geladeiras de medicamentos e casos no Brasil não confirmados](/images/infra-publica-2026/confirmado-pt.png)
+![Quadro com oito afirmações e o que as fontes sustentam: ataque ao Porto de Santos parcial, grupo que assumiu sem confirmação, geladeiras de supermercados e bancos de plasma confirmados, geladeiras de medicamentos e causa técnica do ataque ao porto não confirmadas](/images/infra-publica-2026/confirmado-pt.png)
 
 *As afirmações que circulam e o que as fontes sustentam, conforme a imprensa.*
 
@@ -36,12 +36,13 @@ O que se sabe até aqui:
 
 * **A Polícia Federal abriu inquérito** na terça-feira, 10 de novembro. A PF também disse que ainda não é possível determinar a causa das falhas nem confirmar um ataque hacker.
 * **Quais sistemas foram afetados:** o site oficial, os sistemas internos e serviços usados por clientes e usuários do porto. Internet, e-mail e telefonia voltaram na segunda-feira, 9. A APS criou um gabinete de crise e espera normalizar os sistemas até sexta-feira, 13, segundo o [Poder Naval](https://www.naval.com.br/blog/2026/11/11/porto-de-santos-cria-gabinete-de-crise-apos-ataque-hacker-e-busca-recuperar-sistemas-ate-sexta-feira/). A autoridade informou ter recuperado cerca de 70% dos arquivos afetados.
+* **Nível de proteção elevado:** a Cesportos-SP, comissão coordenada pela PF que cuida da segurança dos portos paulistas, subiu o porto para o nível 2 no domingo, 8.
 * **Segurança reforçada:** a APS adotou mais controle de acesso à área portuária e mais inspeções de carga, por causa da instabilidade nos sistemas de entrada de pessoas e veículos, segundo o [InfoMoney](https://www.infomoney.com.br/brasil/porto-de-santos-eleva-seguranca-apos-falha-em-sistemas-e-suspeita-de-ataque-hacker/).
 * **A ANPD foi informada**, segundo as reportagens.
 
 ### O porto parou?
 
-Não, segundo a autoridade. A APS afirma que as operações seguem normalmente e que não há risco de paralisação. Para os documentos, agentes passaram a usar celulares e o sistema federal Porto Sem Papel, que, segundo a Agência Brasil, não foi afetado. O [Antihype](https://antihype.com.br/c/seguranca/ataque-hacker-porto-de-santos-autoridade-portuaria/) relata que as conferências de navios passaram a ser feitas à mão, e um armador relatou atividades manuais e lentidão no embarque e desembarque. A Santos Brasil, operadora de terminais, disse que o ataque ficou restrito à autoridade portuária.
+Não, segundo a autoridade. A APS afirma que as operações seguem normalmente e que não há risco de paralisação. Para os documentos, agentes passaram a usar celulares e o sistema federal Porto Sem Papel, que, segundo a Agência Brasil, não foi afetado. O [Antihype](https://antihype.com.br/c/seguranca/ataque-hacker-porto-de-santos-autoridade-portuaria/) relata que as conferências de navios passaram a ser feitas à mão, e um armador relatou atividades manuais e lentidão no embarque e desembarque. Os terminais Santos Brasil e BTP disseram que o ataque ficou concentrado nos sistemas da autoridade portuária.
 
 ### Versões que não batem
 
@@ -57,7 +58,7 @@ Segundo a [Metrópoles](https://www.metropoles.com/sao-paulo/pf-abre-inquerito-p
 
 Resumindo: existe uma reivindicação, o grupo não está claro, e as autoridades não a confirmam.
 
-## As geladeiras: Europa, não Brasil
+## As geladeiras: o que aconteceu na Europa
 
 ### Onda 1: supermercados na França (11 e 12 de outubro)
 
@@ -85,9 +86,36 @@ O que se sabe indica ataques pouco sofisticados. Segundo a [Sekoia](https://www.
 
 As recomendações do comunicado americano são simples: tirar os controladores da internet pública, trocar senhas padrão, instalar atualizações, separar a rede operacional da rede da empresa e aposentar equipamentos sem suporte.
 
-### E no Brasil?
+## Qual foi a possível falha
 
-Nenhum incidente de geladeira foi encontrado. O que há é aviso de risco. A [CNN Brasil](https://www.cnnbrasil.com.br/economia/money/tecnologia/de-freezers-a-hospitais-ataques-hackers-na-europa-expoem-riscos-no-brasil/) ouviu especialistas que apontam riscos para supermercados, hospitais e indústrias brasileiras e recomendam trocar equipamentos sem atualizações de segurança e manter manutenção preventiva. Quem diz que "aconteceu aqui" está misturando o alerta com os fatos.
+### No Porto de Santos
+
+A resposta honesta é que a causa técnica ainda não foi divulgada. O [Minuto da Segurança](https://minutodaseguranca.blog.br/ataque-porto-santos-malware-investigacao-2026/) resume bem: não há informação pública suficiente para determinar o vetor inicial, a família do malware ou uma vulnerabilidade específica. O que as fontes permitem é montar uma sequência e comparar as hipóteses.
+
+**A sequência, segundo a imprensa:**
+
+1. Na manhã de 6 de novembro, uma interrupção de energia afetou os servidores da APS, e os sistemas passaram a ter instabilidade.
+2. Segundo a [CNN Brasil](https://www.cnnbrasil.com.br/infra/porto-de-santos-investiga-instabilidades-em-sistema-e-descarta-paralisacao/), a investigação interna do porto concluiu que o vírus já estava na rede antes da queda de energia.
+3. Por volta das 3h de sábado, 7, técnicos encontraram um malware, segundo o blog de segurança.
+4. No domingo, 8, a Cesportos-SP elevou o porto ao nível 2 de proteção.
+5. Em 12 de novembro, a APS disse ter recuperado cerca de 70% dos backups dos arquivos afetados. A volta completa dos sistemas depende de uma nova verificação para ver se ainda existe programa malicioso na rede.
+
+**As hipóteses em jogo:**
+
+* **Um malware que já estava na rede, "dormente", e foi revelado ou acionado pela queda de energia.** É a hipótese da APS e da investigação interna, segundo a imprensa. O que sustenta: o achado do malware e a informação de que ele precedia a queda. O que falta: quando e como entrou, qual é o malware e se é ransomware.
+* **Uma falha elétrica sem invasão.** Foi a posição do presidente da APS em um primeiro momento. O que sustenta: o início coincide com a queda. Contra: a própria APS passou a tratar o caso como ataque cibernético, e houve o achado de malware.
+* **Exploração de vulnerabilidades nas plataformas da APS, com ransomware.** Aparece em uma coluna de opinião de Evandro Lovison, citada pelo [Leouve](https://leouve.com.br/opiniao/quando-o-mundo-fisico-depende-do-digital-o-alerta-que-vem-do-porto-de-santos/). É opinião, e não conclusão de perícia.
+
+**A leitura, marcada como inferência.** Com o que é público, a explicação que melhor combina os fatos é a primeira: uma invasão anterior que passou despercebida, com a queda de energia funcionando como gatilho ou como o momento em que o problema apareceu. Se isso se confirmar, a falha principal não foi a queda de energia em si, e sim a **detecção tardia**: o malware já estava na rede e ninguém viu até os servidores reiniciarem. Os 70% de backups recuperados sugerem que havia cópias, o que ajudou a recuperação, mas isso também é leitura. Para fechar a questão faltam o vetor de entrada, o malware e o tempo que ele ficou na rede, e isso só a perícia vai dizer.
+
+### Nas geladeiras
+
+Aqui a falha é bem mais clara, embora o detalhe técnico ainda não esteja confirmado. A falha de fundo é de **equipamento acessível pela internet, com software desatualizado ou sem correção possível, e com acesso fraco**.
+
+* **O equipamento.** A Danfoss disse que a maior parte das unidades atingidas eram modelos antigos, o AK-SM 800, fora de linha desde maio de 2021, e o AK-SC 355, descontinuado em 2016, que não recebem mais atualizações. Algumas unidades atuais AK-SM 800A, com firmware desatualizado, também foram atingidas.
+* **As falhas conhecidas.** Os avisos da Danfoss para o 800A listam as CVE-2025-41450, CVE-2025-41451 e CVE-2025-41452. Uma delas é um desvio de autenticação por uma senha oculta calculada a partir da data do equipamento, em versões anteriores à 4.2, e outra permite execução de comandos depois de autenticado.
+* **O que não está confirmado.** A [SOCRadar](https://socradar.io/blog/french-supermarket-cyberattack-ot/) observa que nenhuma autoridade nem o fabricante ligou essas falhas a este incidente, e um artigo cita um número de CVE diferente, o que conflita com os avisos. Para os modelos mais antigos, analistas dizem que a entrada provavelmente se deu por senha padrão, senha fraca ou falhas que nunca foram corrigidas por falta de suporte. Uma análise afirma que os sistemas holandeses afetados não estavam em uma rede segura e ainda usavam senhas padrão.
+* **O conserto.** Unidades AK-SM 8xxA devem ser atualizadas para a versão R4.3.1 ou posterior. Isso não resolve os modelos antigos, que precisam ser isolados da internet ou substituídos.
 
 ## Quem pode ser responsável
 
@@ -134,10 +162,6 @@ A APS não informou se houve ransomware ou roubo de dados e diz não saber se da
 
 Foram supermercados e câmaras de plasma do banco de sangue francês. Geladeiras de medicamentos de farmácia ou hospital não têm caso confirmado nas fontes.
 
-### "Isso aconteceu no Brasil" — falso
-
-Os casos de geladeira são europeus. No Brasil há alerta, não incidente.
-
 ### "As bolsas de plasma chegaram a 110 °C" — sem evidência
 
 110 °C era o valor programado, e nada indica que o interior das câmaras tenha chegado a isso. Os alarmes detectaram a anomalia a tempo.
@@ -156,7 +180,7 @@ Os dois casos têm algo em comum, e não é sofisticação. São sistemas que ni
 
 No porto, o que se sabe é pouco e a investigação está no começo. Há um ataque confirmado pela autoridade, uma reivindicação sem nome claro e duas falas que não batem. Nas geladeiras, o caso é mais claro, e é europeu. A França já atribui a primeira onda ao Irã, e mesmo assim sem que ninguém tenha assumido.
 
-Para quem opera esses sistemas aqui, o aviso dos especialistas é o mesmo da CISA: tirar da internet o que não precisa estar lá, trocar a senha de fábrica, atualizar e aposentar o que não recebe mais correção.
+Para quem opera esses sistemas, o aviso dos especialistas é o mesmo da CISA: tirar da internet o que não precisa estar lá, trocar a senha de fábrica, atualizar e aposentar o que não recebe mais correção.
 
 ## Fontes
 
@@ -182,7 +206,11 @@ Para quem opera esses sistemas aqui, o aviso dos especialistas é o mesmo da CIS
 * [CNBC: bancos de sangue nos ataques às geladeiras](https://www.cnbc.com/2026/11/04/blood-bank-fridges-cyberattacks.html)
 * [BleepingComputer: alerta do FBI e da CISA](https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/)
 * [Help Net Security: agências americanas alertam](https://www.helpnetsecurity.com/2026/11/06/cyberattacks-refrigeration-systems-cisa-fbi/)
-* [CNN Brasil: de freezers a hospitais, riscos no Brasil](https://www.cnnbrasil.com.br/economia/money/tecnologia/de-freezers-a-hospitais-ataques-hackers-na-europa-expoem-riscos-no-brasil/)
+* [CNN Brasil: Porto de Santos adota plano de contingência](https://www.cnnbrasil.com.br/infra/porto-de-santos-investiga-instabilidades-em-sistema-e-descarta-paralisacao/)
+* [Minuto da Segurança: malware oculto e investigação](https://minutodaseguranca.blog.br/ataque-porto-santos-malware-investigacao-2026/)
+* [Leouve: o alerta que vem do Porto de Santos](https://leouve.com.br/opiniao/quando-o-mundo-fisico-depende-do-digital-o-alerta-que-vem-do-porto-de-santos/)
+* [Times Brasil: Porto de Santos recupera 70% dos backups](https://timesbrasil.com.br/empresas-e-negocios/tecnologia-e-inovacao/porto-de-santos-recupera-70-dos-backups-apos-ataque-hacker/)
+* [SOCRadar: o ataque às geladeiras francesas](https://socradar.io/blog/french-supermarket-cyberattack-ot/)
 
 **Atribuição**
 

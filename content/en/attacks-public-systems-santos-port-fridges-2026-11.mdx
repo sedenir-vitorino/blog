@@ -1,0 +1,198 @@
+---
+title: "Port of Santos and hacked fridges: what's true about the attacks on public systems"
+description: "We checked the attack on the Port of Santos and the break-ins on refrigerators and plasma storage in Europe: what's confirmed, what's still uncertain, who might be behind it, and what it means for Brazil."
+date: 2026-11-12
+lang: en
+translationKey: "ataques-sistemas-publicos-santos-geladeiras-2026-11"
+tags: [cybersecurity, critical-infrastructure, port-of-santos, hacker-attacks]
+draft: false
+---
+
+![Two cards: Port of Santos, with the attack confirmed by the authority and the cause under review, and hacked refrigerators, confirmed in Europe with no case in Brazil](/images/infra-publica-2026/capa-en.png)
+
+In recent weeks, two stories about attacks on public-use systems started circulating together: the Port of Santos, Latin America's largest, with its systems down, and food and medicine refrigerators being broken into and heated by hackers. Along the way, versions got mixed up. Some people started talking about hacked medicine refrigerators "here in Brazil," others about a port at a standstill.
+
+We went to check. This article separates what's confirmed from rumor, says where each case happened, and handles the question of who might be behind it with one rule: **we only call someone the author of an attack if that person or group claimed responsibility.** When there's suspicion or attribution by governments and companies, it appears as such.
+
+<Summary title="Quick summary">
+The Port of Santos confirmed a cyberattack, but the cause and extent are under review, and operations, according to the port authority, are still running. The hacked refrigerators are a European case: supermarkets in France and other countries and, on November 2, the plasma cold rooms of the French blood service. I found no attacks on medicine refrigerators in pharmacies or hospitals, and no refrigerator case in Brazil. France attributed the October attacks to Iran, but nobody has claimed responsibility.
+</Summary>
+
+*Written on November 12, 2026. The cases are ongoing and may change.*
+
+## What's confirmed
+
+![Chart with eight claims and what the sources support: the Port of Santos attack partial, a group that claimed responsibility unconfirmed, supermarket fridges and plasma storage confirmed, medicine fridges and cases in Brazil not confirmed](/images/infra-publica-2026/confirmado-en.png)
+
+*The claims going around and what the sources support, as reported by the press.*
+
+## Port of Santos
+
+### What happened
+
+On Friday, November 6, a power outage hit the Santos Port Authority (APS), and the authority's systems went partly offline. APS confirmed it suffered a cyberattack, but says it hasn't yet been able to determine the extent of the incident or whether data was improperly accessed, according to [Jornal do Comércio](https://www.jornaldocomercio.com/economia/2026/11/1270039-porto-de-santos-confirma-ataque-hacker-e-diz-nao-saber-se-dados-foram-acessados-indevidamente.html).
+
+What's known so far:
+
+* **The Federal Police opened an inquiry** on Tuesday, November 10. The police also said it's not yet possible to determine the cause of the failures or confirm a hacker attack.
+* **Which systems were affected:** the official website, internal systems, and services used by port customers and users. Internet, email, and phone came back on Monday the 9th. APS created a crisis cabinet and expects to normalize systems by Friday the 13th, according to [Poder Naval](https://www.naval.com.br/blog/2026/11/11/porto-de-santos-cria-gabinete-de-crise-apos-ataque-hacker-e-busca-recuperar-sistemas-ate-sexta-feira/). The authority said it recovered about 70% of the affected files.
+* **Security reinforced:** APS adopted more access control to the port area and more cargo inspections, because of instability in the systems that control entry of people and vehicles, according to [InfoMoney](https://www.infomoney.com.br/brasil/porto-de-santos-eleva-seguranca-apos-falha-em-sistemas-e-suspeita-de-ataque-hacker/).
+* **The ANPD, Brazil's data protection authority, was informed**, according to reports.
+
+### Did the port stop?
+
+Not according to the authority. APS says operations continue normally and there's no risk of a stoppage. For documents, agents started using cell phones and the federal Porto Sem Papel system, which, according to Agência Brasil, wasn't affected. [Antihype](https://antihype.com.br/c/seguranca/ataque-hacker-porto-de-santos-autoridade-portuaria/) reports that ship checks started being done by hand, and a shipowner reported manual activities and slowness in loading and unloading. Santos Brasil, a terminal operator, said the attack was restricted to the port authority.
+
+### Versions that don't match
+
+There are divergences that need to be clear:
+
+* **The cause.** APS believes a virus already installed on the equipment was activated by the power outage, according to [TV Sim Brasil](https://tvsimbrasil.com.br/sp/santos/tecnologia/noticia/2026/11/12/aps-virus-dormente-ataque-hacker-porto-santos). It's the authority's own hypothesis, not yet proven. Other sources talk about an intrusion after the servers restarted.
+* **Whether it was an attack.** APS president Anderson Pomini said the hackers' claim doesn't prove an attack and that systems were interrupted after the power outage. APS itself, though, confirmed a cyberattack, and there's tension between the two statements.
+* **The type of attack.** APS didn't say whether there was ransomware, data theft, or denial of service.
+
+### Who claimed it
+
+According to [Metrópoles](https://www.metropoles.com/sao-paulo/pf-abre-inquerito-para-apurar-suposto-ataque-hacker-no-porto-de-santos), the police opened the inquiry after a group claimed responsibility for the intrusion. The group's name hasn't been consistently disclosed. One site cites a group called n0n, which on October 12 posted ransom demands against dozens of maritime companies with mentions of Santos, but there's no official confirmation of a link to this week's attack. Another lead is a "Santos Brasil (port operations)" listing on ransomware.live, dated October 12 with a payment deadline that expired on October 19, also with no confirmed link to the case. Pomini noted that claiming responsibility is a common practice among cybercriminals.
+
+In short: there's a claim, the group isn't clear, and the authorities don't confirm it.
+
+## The fridges: Europe, not Brazil
+
+### Wave 1: supermarkets in France (October 11 and 12)
+
+On the night of October 11 to 12, attackers took remote control of fridges and freezers at hundreds of French supermarkets and heated them, according to [The Register](https://www.theregister.com/security/2026/10/13/cyberattacks-crank-french-supermarket-refrigeration-systems-up-to-50c/5302784) and [BleepingComputer](https://www.bleepingcomputer.com/news/security/cyberattack-shuts-down-refrigerators-at-french-supermarkets/). Cold rooms and display cases were heated for about six hours, up to 50°C (122°F), and stores had to throw food away.
+
+The numbers vary: between 250 and 350 supermarkets affected, according to one report, and more than 350, according to another. French authorities speak of about 700 retail locations targeted, which is the total of targets and not of confirmed victims, with at least 15 fires. Intermarché reported losses of tens of millions of euros in a single day, according to AP, via [PBS](https://www.pbs.org/newshour/world/france-blames-iran-for-last-months-cyberattack-on-supermarket-fridges).
+
+### Wave 2: several countries (November 2)
+
+On November 2, a second wave hit supermarkets in other countries. [BleepingComputer](https://bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires) speaks of more than 115 stores in six countries, while Aviatrix cites eight. The list of countries varies: Belgium, Luxembourg, the Netherlands, Sweden, Estonia, Ireland, Portugal, and Finland appear, depending on the outlet. Details on this wave are at [Help Net Security](https://www.helpnetsecurity.com/2026/11/02/european-supermarkets-refrigeration-units-cyberattacks/).
+
+### The French blood bank (night of November 1 to 2)
+
+This is the part that most resembles "medicine refrigerators." On the night of November 1 to 2, an attack hit Coolworld, the provider that maintains the refrigeration equipment of the Établissement français du sang (EFS), France's blood service. Three sites were affected, and what was stored was plasma for transfusion and for fractionation, plus samples, according to [Clubic](https://www.clubic.com/actualite-637672-comment-des-alarmes-ont-sauve-le-plasma-de-l-efs-d-une-cyberattaque-en-pleine-nuit.html).
+
+An important detail: the news talks about a temperature of 110°C, but that was the **setpoint**, the value programmed in the controller, not the measured temperature. The freezers normally run at about −30°C. Nothing establishes that the inside of the cold rooms or the bags reached 110°C. Alarms detected the anomaly in time and teams were able to protect the bags, with no product loss reported. EFS stated, in a November 3 notice, that its own systems weren't the source. There's no established link so far to the supermarket attacks, and the investigation continues.
+
+### And pharmacy and hospital medicines?
+
+I found no confirmed attack on medicine refrigerators in pharmacies or hospitals. What's documented is plasma and supermarkets. There is, yes, a warning from the United States: on November 5, CISA, the FBI, and the Departments of Health, Agriculture, and Transportation published a notice saying attackers are actively targeting electronic temperature controllers and commercial refrigeration systems. According to [BleepingComputer](https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/), the focus is on grocery retail and refrigerated storage. One coverage mentions pharmacies that store insulin and vaccines among the sectors at risk, but I found no confirmation of that in the official text. The best thing is to read the original notice.
+
+### How they got in
+
+What's known points to unsophisticated attacks. According to [Sekoia](https://www.sekoia.com/blog/the-cold-chain-on-fire-unpatched-danfoss-controllers-exploited), the attackers exploited internet-exposed controllers with outdated firmware. Danfoss said the affected units ran old firmware, and a secondary source cites end-of-life models that no longer receive fixes. According to Wikipedia, many were accessible with the username "admin" and the current date as the password, and an FBI official said attackers get in through controllers that are unpatched, reachable from the internet, or still using the factory password from the manual. After the attack, the number of Danfoss controllers exposed in France dropped 71%, according to [Infosecurity Magazine](https://www.infosecurity-magazine.com/news/france-expose-danfoss-controllers/).
+
+The recommendations in the US notice are simple: take controllers off the public internet, change default passwords, install updates, separate the operational network from the company network, and retire unsupported equipment.
+
+### And in Brazil?
+
+No refrigerator incident was found. What exists is a risk warning. [CNN Brasil](https://www.cnnbrasil.com.br/economia/money/tecnologia/de-freezers-a-hospitais-ataques-hackers-na-europa-expoem-riscos-no-brasil/) spoke with experts who point to risks for Brazilian supermarkets, hospitals, and industries and recommend replacing equipment without security updates and keeping up preventive maintenance. Anyone who says "it happened here" is mixing the warning with the facts.
+
+## Who might be responsible
+
+The rule bears repeating: we only treat someone as the author of an attack if they claimed responsibility.
+
+### The refrigerator attacks
+
+The French government attributed the October attacks to Iran. France's Cyber Crisis Coordination Center linked the case to the Shahid Kaveh unit of Iran's Revolutionary Guards, and the Foreign Ministry said it would summon Iran's ambassador. Paris intends to seek sanctions in the European Union, according to [Axios](https://www.axios.com/2026/11/10/france-iran-supermarket-refridgerator-hacks). According to BleepingComputer, French investigators cite CyberbanNews, an outlet France links to the unit, publicizing the attacks on October 13.
+
+A few cautions:
+
+* It's a **government attribution**, not a claim of responsibility. I found no group claiming the attacks directly.
+* Iran, according to [The Epoch Times](https://www.theepochtimes.com/world/france-blames-iran-for-supermarket-fridge-cyberattack-6122510), hadn't commented as of publication.
+* France attributed only the October attacks, not the November wave or the blood bank case.
+
+### The blood bank
+
+No authorship attributed or claimed so far, and EFS hasn't established a link to the supermarket attacks.
+
+### Port of Santos
+
+There's a claim by a group not consistently identified, which authorities don't confirm. The names that appear in listings, like n0n, have no confirmed link to this case.
+
+## Other recent cases
+
+* **Water in the United States.** Secureframe describes a July campaign in which operators were locked out of controllers at more than 30 water and wastewater utilities in Minnesota, with loss of pressure, flooding, and a treatment plant taken offline. One outlet talks about cases in 12 states with suspected Iran-linked hackers, but the text itself says the attribution isn't confirmed. The EPA says attacks on water systems have increased several-fold.
+* **Hospitals in Belgium.** On January 13, the AZ Monica hospital in Antwerp disconnected its servers after a ransomware attack. More than 70 surgeries were cancelled and seven patients were transferred. Two Belgian hospitals were unable to pay 1,200 staff members.
+
+## Myth or fact
+
+### "Hackers shut down the Port of Santos" — exaggeration
+
+According to the port authority, operations continue. There was system instability, manual workarounds, and administrative slowness, but not a stoppage. Worth checking with APS, because versions change.
+
+### "It was ransomware with data theft" — not confirmed
+
+APS didn't say whether there was ransomware or data theft and says it doesn't know whether data was accessed.
+
+### "The cause was a dormant virus" — hypothesis
+
+That's what APS believes, but it isn't proven, and there are different versions of the order of events.
+
+### "Hackers broke into medicine fridges in Europe" — partly
+
+It was supermarkets and plasma cold rooms at the French blood bank. Medicine refrigerators in pharmacies or hospitals have no confirmed case in the sources.
+
+### "This happened in Brazil" — false
+
+The refrigerator cases are European. In Brazil there's a warning, not an incident.
+
+### "The plasma bags reached 110°C" — no evidence
+
+110°C was the programmed value, and nothing indicates the inside of the cold rooms reached that. Alarms detected the anomaly in time.
+
+### "Iran claimed the attacks" — no
+
+France attributes the October attacks to Iran, and Iran didn't comment. No group claimed them, in the sources I found.
+
+### "These are sophisticated attacks" — doesn't look like it
+
+The reports point to old equipment, exposed to the internet and with default passwords.
+
+## What you can conclude
+
+The two cases have something in common, and it isn't sophistication. They're systems nobody thought of as targets, until someone remembered they're on the internet. Refrigerator controllers with factory passwords and a port authority whose servers restart after a power outage aren't movie targets. They're everyday equipment, forgotten.
+
+At the port, what's known is little and the investigation is at the start. There's an attack confirmed by the authority, a claim with no clear name, and two statements that don't match. With the fridges, the case is clearer, and it's European. France already attributes the first wave to Iran, and even so without anyone having claimed it.
+
+For people who operate these systems here, the experts' advice is the same as CISA's: take off the internet what doesn't need to be there, change the factory password, update, and retire what no longer gets fixes.
+
+## Sources
+
+**Port of Santos**
+
+* [Jornal do Comércio: Port of Santos confirms hacker attack](https://www.jornaldocomercio.com/economia/2026/11/1270039-porto-de-santos-confirma-ataque-hacker-e-diz-nao-saber-se-dados-foram-acessados-indevidamente.html)
+* [Poder Naval: crisis cabinet and recovery deadline](https://www.naval.com.br/blog/2026/11/11/porto-de-santos-cria-gabinete-de-crise-apos-ataque-hacker-e-busca-recuperar-sistemas-ate-sexta-feira/)
+* [TV Sim Brasil: the dormant virus hypothesis](https://tvsimbrasil.com.br/sp/santos/tecnologia/noticia/2026/11/12/aps-virus-dormente-ataque-hacker-porto-santos)
+* [InvestNews: what happened and what remains affected](https://investnews.com.br/negocios/ataque-hacker-porto-de-santos/)
+* [InfoMoney: security reinforced](https://www.infomoney.com.br/brasil/porto-de-santos-eleva-seguranca-apos-falha-em-sistemas-e-suspeita-de-ataque-hacker/)
+* [Metrópoles: the Federal Police open an inquiry](https://www.metropoles.com/sao-paulo/pf-abre-inquerito-para-apurar-suposto-ataque-hacker-no-porto-de-santos)
+* [Antihype: ship checks by hand](https://antihype.com.br/c/seguranca/ataque-hacker-porto-de-santos-autoridade-portuaria/)
+* [BNamericas: the attack on Latin America's largest port](https://bnamericas.com/en/news/cyberattack-on-latin-americas-largest-port-exposes-risks-to-critical-infrastructure)
+
+**Refrigerators and plasma storage**
+
+* [BleepingComputer: French supermarket fridges](https://www.bleepingcomputer.com/news/security/cyberattack-shuts-down-refrigerators-at-french-supermarkets/)
+* [The Register: up to 50°C](https://www.theregister.com/security/2026/10/13/cyberattacks-crank-french-supermarket-refrigeration-systems-up-to-50c/5302784)
+* [Help Net Security: second wave](https://www.helpnetsecurity.com/2026/11/02/european-supermarkets-refrigeration-units-cyberattacks/)
+* [Sekoia: unpatched Danfoss controllers](https://www.sekoia.com/blog/the-cold-chain-on-fire-unpatched-danfoss-controllers-exploited)
+* [Infosecurity Magazine: exposed controllers drop 71%](https://www.infosecurity-magazine.com/news/france-expose-danfoss-controllers/)
+* [Clubic: alarms saved EFS's plasma](https://www.clubic.com/actualite-637672-comment-des-alarmes-ont-sauve-le-plasma-de-l-efs-d-une-cyberattaque-en-pleine-nuit.html)
+* [CNBC: blood banks in the fridge attacks](https://www.cnbc.com/2026/11/04/blood-bank-fridges-cyberattacks.html)
+* [BleepingComputer: FBI and CISA warning](https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/)
+* [Help Net Security: US agencies warn](https://www.helpnetsecurity.com/2026/11/06/cyberattacks-refrigeration-systems-cisa-fbi/)
+* [CNN Brasil: from freezers to hospitals, risks in Brazil](https://www.cnnbrasil.com.br/economia/money/tecnologia/de-freezers-a-hospitais-ataques-hackers-na-europa-expoem-riscos-no-brasil/)
+
+**Attribution**
+
+* [Axios: France links Iranian hackers to the attacks](https://www.axios.com/2026/11/10/france-iran-supermarket-refridgerator-hacks)
+* [PBS, via AP: France blames Iran](https://www.pbs.org/newshour/world/france-blames-iran-for-last-months-cyberattack-on-supermarket-fridges)
+* [BleepingComputer: France blames Iranian hackers](https://www.bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires/)
+* [CBC: France blames Iran](https://www.cbc.ca/news/world/france-iran-cyberattack-accusation-9.7415031)
+* [The Epoch Times: France blames Iran](https://www.theepochtimes.com/world/france-blames-iran-for-supermarket-fridge-cyberattack-6122510)
+
+**Other cases**
+
+* [Secureframe: recent attacks](https://secureframe.com/blog/recent-cyber-attacks)
+* [BleepingComputer: Belgian hospital AZ Monica](https://www.bleepingcomputer.com/news/security/belgian-hospital-az-monica-shuts-down-servers-after-cyberattack/)

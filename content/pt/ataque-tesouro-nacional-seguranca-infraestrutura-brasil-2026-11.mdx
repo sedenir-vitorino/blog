@@ -1,0 +1,276 @@
+---
+title: "O ataque ao Tesouro Nacional e a segurança da infraestrutura no Brasil: por que tantos ataques?"
+description: "O Tesouro Nacional, a Caixa, a Petrobras, a Polícia Civil de SP e o Porto de Santos em uma semana. O que se sabe de cada caso, o que não se sabe sobre como foram feitos, quem reivindicou e por que o Brasil está tão exposto."
+date: 2026-11-13
+lang: pt
+translationKey: "ataque-tesouro-infraestrutura-brasil-2026-11"
+tags: [ciberseguranca, brasil, tesouro-nacional, infraestrutura-critica, ataques-hacker]
+draft: false
+---
+
+Em menos de duas semanas, o Brasil leu manchetes de ataque cibernético contra o Tesouro Nacional, a Caixa, a Petrobras, a Polícia Civil de São Paulo e o Porto de Santos. Para quem lê de fora, parece uma onda coordenada. As fontes não sustentam isso. O que elas mostram é um conjunto de incidentes diferentes, em lugares diferentes, que chegaram ao público quase juntos, e uma fragilidade estrutural que ajuda a explicar por que tantos deles dão certo.
+
+Este artigo conta o que se sabe de cada caso, separa o que foi divulgado sobre **como** os ataques aconteceram (quase nada), monta teorias marcadas como teoria e analisa por que o Brasil está tão exposto. Vale uma regra: **só chamamos alguém de autor de um ataque se essa pessoa ou grupo assumiu a autoria.** Quem reivindica aparece como alguém que reivindica, e as reivindicações aparecem como não confirmadas.
+
+<Summary title="Em resumo">
+O Tesouro Nacional confirmou o acesso indevido a duas bases: cerca de 30 mil cadastros e 4 mil chaves Pix, sem prejuízo financeiro declarado. No mesmo período vieram a público a Caixa Vida e Previdência (7,6 milhões de clientes), o Porto de Santos, uma tentativa contra os sites da Petrobras e a alegação de venda de credenciais da Polícia Civil de SP. Em nenhum caso foram divulgados o método de entrada, a ferramenta ou a vulnerabilidade usada. Nenhuma fonte liga os casos entre si. Uma auditoria do TCU mostra que nenhum dos 239 órgãos avaliados cumpre as 56 medidas básicas de segurança, e há falta de dinheiro, de gente e de coordenação.
+</Summary>
+
+*Texto escrito em 13 de novembro de 2026. Os casos estão em andamento e podem mudar.*
+
+## 1. O ataque ao Tesouro Nacional
+
+O que a Secretaria do Tesouro Nacional (STN) confirmou, segundo a [Tecnoblog](https://tecnoblog.net/noticias/tesouro-nacional-alerta-para-vazamento-de-dados-pessoais-e-chaves-pix/) e a [CNN Brasil](https://www.cnnbrasil.com.br/economia/money/macroeconomia/tesouro-identifica-acesso-indevido-a-30-mil-cadastros-e-4-mil-chaves-pix/):
+
+* O órgão identificou, em **4 de novembro**, acesso indevido a duas bases de dados. O caso só foi divulgado em **12 de novembro**, oito dias depois. O Tesouro atribui o intervalo ao tempo de detectar e confirmar o incidente, fazer investigações internas e conter os danos.
+* Uma base é a do portal **e-Serviços**, com cerca de **30 mil cadastros**. Foram acessados nomes, CPFs e e-mails. A outra é uma ferramenta de consultas analíticas internas, que continha cerca de **4 mil chaves Pix** de beneficiários de pagamentos federais.
+* O órgão diz que **não houve impacto financeiro nem comprometimento de sistemas estruturantes**. O acesso foi interrompido, e o caso foi comunicado à Autoridade Nacional de Proteção de Dados (ANPD) e ao CTIR Gov, o centro de resposta a incidentes do governo federal.
+* O risco apontado é o de **golpes**: com nome, CPF e e-mail, o golpista consegue montar mensagens mais convincentes. A [Brasil 247](https://www.brasil247.com/brasilia/tesouro-nacional-sofre-ataque-cibernetico-e-tem-dados-de-usuarios-acessados/) lembra que ter uma chave Pix exposta não significa que alguém conseguiu movimentar dinheiro.
+
+**O que não se sabe:** como o invasor entrou, quem foi e até onde o acesso chegou. Nenhuma fonte traz reivindicação de autoria.
+
+**Divergências:**
+
+* Uma fonte fala em cerca de 34 mil usuários, e as demais em 30 mil.
+* A Tecnoblog data o incidente em dezembro de 2025, o que contradiz as demais. A data de 4 de novembro é a mais consistente, mas vale conferir.
+* Nenhuma fonte menciona o SIAFI ou o Tesouro Direto. Não há evidência de que tenham sido afetados.
+
+**Um ponto que chama atenção:** as chaves Pix estavam em uma **base de consultas analíticas internas**, e não no sistema principal. Bases desse tipo costumam acumular dados sensíveis para análise e, em muitos lugares, recebem menos proteção do que o sistema de produção. Esta é uma observação nossa, e não uma conclusão das fontes.
+
+## 2. Uma semana, vários casos diferentes
+
+Segundo a [Convergência Digital](https://convergenciadigital.com.br/governo/depois-do-porto-de-santos-ataques-hackers-miram-orgaos-do-governo-e-atingem-tesouro-nacional-petrobras-e-caixa/) e o [Olhar Digital](https://olhardigital.com.br/2026/11/13/seguranca/seus-dados-estao-seguros-caixa-petrobras-e-tesouro-sofrem-ataques-ciberneticos-em-menos-de-24h), os casos que vieram a público foram:
+
+* **Tesouro Nacional (4 de novembro):** o caso descrito acima.
+* **Porto de Santos (6 de novembro):** sistemas da Autoridade Portuária (APS) fora do ar depois de uma queda de energia, com inquérito da Polícia Federal. As operações, segundo a autoridade, seguiram por contingência.
+* **Caixa Vida e Previdência (6 de novembro):** a Caixa Seguridade informou a cópia de dados cadastrais de **7,6 milhões** de clientes e ex-clientes: nomes, CPFs e, em parte dos registros, endereços, telefones, e-mails e datas de nascimento. A empresa diz não haver indício de comprometimento de dados financeiros, saldos ou senhas, afirma ter bloqueado os mecanismos usados e contratou perícia forense, segundo a [Agência Brasil](https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-seguridade-informa-ataque-cibernetico-e-vazamento-de-dados). O acesso foi identificado em 6 de novembro, a ANPD foi notificada em 11 e o mercado soube em 12.
+* **Polícia Civil de São Paulo (alegação anunciada em 7 de novembro):** veja a seção 3.
+* **Petrobras (11 de novembro):** a empresa confirmou uma tentativa de ataque contra o site externo e o portal da Agência Petrobras, com lentidão e instabilidade. Segundo a A Tribuna, os sites ficaram fora do ar por cerca de 50 minutos. A Petrobras diz que as páginas ficam em servidores externos, sem conexão com seus sistemas internos, e que não houve acesso nem impacto nos sistemas e nas operações.
+* **Portos privados (outubro):** em 12 de outubro, um grupo chamado n0n listou dezenas de empresas marítimas e cobrou valores que, somados, chegam a cerca de US$ 1,22 bilhão. Veja a seção 5.
+
+**Cuidado importante:** nenhuma fonte liga esses casos entre si. Uma delas diz que os relatos vieram "sem indicação de relação entre os casos". A Polícia Federal apura se o ataque ao porto e o da Petrobras têm ligação, mas isso ainda é uma verificação, e não uma conclusão.
+
+Há uma diferença que o público costuma perder de vista. Alguns casos foram **invasões** com cópia de dados (Tesouro, Caixa). Um foi **indisponibilidade** de sistemas com pedido de resgate relatado (Santos). Um foi uma **tentativa que derrubou sites públicos** por pouco tempo (Petrobras). E um é uma **alegação** que ainda precisa de confirmação (Polícia Civil). Chamar tudo de "ataque hacker" mistura coisas muito diferentes.
+
+## 3. O caso da Polícia Civil de São Paulo
+
+Aqui é preciso cuidado redobrado, porque **ainda é uma alegação**.
+
+* Em 7 de novembro, um perfil chamado **bl33dr00t** anunciou, em um fórum criminoso, a venda de cerca de **22 mil credenciais** da Polícia Civil de SP por **US$ 40 mil**. O perfil afirma ter obtido acesso administrativo aos servidores do **Instituto de Identificação (IIRGD)**, ao sistema **Phoenix** e ao **SharePoint** da corporação, segundo o [BoletimSec](https://boletimsec.com/cibercriminosos-anunciam-venda-de-22-mil-credenciais-da-policia-civil-de-sp/) e a [Oficina da Net](https://www.oficinadanet.com.br/seguranca/74032-policia-civil-de-sao-paulo-investiga-ataque-hacker).
+* A **Secretaria da Segurança Pública** diz que verificou os ambientes citados e **não constatou acessos indevidos** aos bancos de dados. Um inquérito policial foi aberto.
+* As capturas de tela divulgadas pelo grupo mostram interfaces das plataformas, mas **não comprovam** privilégios administrativos nem a extração das credenciais. A autenticidade do pacote também não foi confirmada até 10 de novembro.
+* O TecMundo tentou contato com o grupo, sem resposta. O mesmo perfil já havia reivindicado, em julho, a invasão do site da Prefeitura de Morrinhos (GO), que ficou restrita à página, sem confirmação de acesso a dados.
+
+Aqui existe uma reivindicação, e o bl33dr00t é quem a faz. Mesmo assim, anunciar uma venda não prova que houve invasão. Em fóruns criminosos, anúncios com pacotes antigos, reaproveitados ou exagerados são conhecidos. Só o inquérito vai dizer.
+
+## 4. Quem reivindicou o quê
+
+* **Polícia Civil de SP:** o perfil **bl33dr00t**, em fórum, em 7 de novembro. Alegação não confirmada.
+* **Porto de Santos:** alguém com o apelido **"Azael"** teria dito ter feito o ataque, segundo a [A Tribuna](https://www.atribuna.com.br/noticias/policia/ataque-hacker-a-sites-da-petrobras-e-confirmado-autor-tambem-seria-responsavel-por-colapso-digital-no-porto-de-santos-1.536592). A PF apura essa reivindicação. Reportagens também dizem que a APS recebeu um pedido de resgate de um grupo que tentou negociar, sem nome divulgado de forma consistente.
+* **Petrobras:** o mesmo "Azael" avisou a imprensa por e-mail, antes, que derrubaria o site às 14h10, e a página apresentou instabilidade por volta das 14h15. A PF verifica se há ligação com o caso do porto. Uma reportagem diz que a PF também abriu inquérito sobre um hacker de mesmo apelido contra instituições no Tocantins, mas **não há confirmação** de que seja a mesma pessoa nem de que "Azael" tenha feito os ataques.
+* **Portos privados (outubro):** o grupo **n0n**, que listou as empresas em seu site de vazamentos.
+* **Tesouro Nacional e Caixa:** nenhum grupo assumiu, nas fontes que encontrei.
+
+Vale lembrar o que a Autoridade Portuária de Santos disse: a reivindicação de autoria é prática comum entre criminosos cibernéticos e, por si só, não prova um ataque.
+
+## 5. O que se sabe sobre como os ataques foram feitos
+
+A resposta curta é: **quase nada**. Em nenhum dos casos as autoridades ou as empresas divulgaram o método de entrada, a ferramenta, a família de malware ou uma vulnerabilidade (CVE). O que segue é o que existe de informação pública, caso a caso.
+
+**Tesouro Nacional.** Não há vetor, vulnerabilidade nem ferramenta divulgados. O órgão diz apenas que a invasão foi detectada pelos mecanismos de segurança e pelo monitoramento da rede, que permitiram interromper o acesso, e que adotou medidas adicionais de proteção. Não há confirmação de que senhas ou credenciais de acesso foram comprometidas.
+
+**Caixa Vida e Previdência.** Não há detalhe sobre API, credencial ou vulnerabilidade. A empresa diz que "bloqueou os mecanismos usados no ataque", sem dizer quais, e que não encontrou evidência de vazamento de senhas. A perícia externa está em andamento. Só o resultado é público: cópia de dados cadastrais.
+
+**Porto de Santos.** É o caso com mais pistas, mas nenhuma sobre ferramenta.
+
+* A [Gazeta do Povo](https://www.gazetadopovo.com.br/brasil/ataque-hacker-porto-de-santos-operacao-resgate-servidores/) diz que o caso tem **características de ransomware**, tipo de ataque em que os arquivos são criptografados e o criminoso cobra para devolvê-los, sem confirmação oficial. Um blog de segurança, o [Minuto da Segurança](https://minutodaseguranca.blog.br/ataque-porto-santos-malware-investigacao-2026/), afirma que, até 11 de novembro, não havia informação pública para determinar vetor, família do malware, vulnerabilidade, ransomware ou grupo.
+* Segundo reportagens, como a do [111 Next](https://br.111next.com/2026/11/12/porto-de-santos-confirma-recebimento-de-pedido-de-resgate-apos-ataque-hacker), a APS **recebeu um pedido de resgate**, o grupo tentou negociar e a autoridade **não pagou**.
+* Isso conflita com a fala do presidente da APS, de que os sistemas foram interrompidos após a queda de energia, sem sinais claros de invasão. A própria nota oficial da APS, porém, fala em "ataque cibernético".
+* Sobre a recuperação: segundo a Gazeta, servidores e backups foram levados para São Paulo e uma operação de emergência foi executada pela HP, fornecedora dos dados. O trecho disponível não detalha as etapas técnicas. A APS disse ter recuperado cerca de 70% dos backups de arquivos até 12 de novembro, e os próprios veículos ressalvam que isso não significa que 70% dos sistemas funcionem.
+
+**Portos privados (n0n).** Aqui a informação pública é mais rica, e vem da empresa de segurança marítima CyDome.
+
+* O grupo n0n surgiu em **18 de setembro**, listou 38 organizações em 12 de outubro (a CyDome citou 37 em um aviso anterior), com prazo de pagamento em 19 de outubro e pedidos que somam cerca de **US$ 1,22 bilhão**. A CyDome nota que o grupo já cumpriu ameaças de prazo, trocando listagens anônimas por nomes reais. ([Cydome](https://cydome.io/n0n-cyber-extortion-incident-involving-38-maritime-companies-likely-traces-back-to-a-single-vendor/), [Smart Maritime Network](https://smartmaritimenetwork.com/2026/10/20/cyber-group-lists-38-maritime-organisations-with-1-22bn-in-ransom-demands/))
+* A avaliação da CyDome é que os dados provavelmente vieram de **um único acervo de suporte e projetos ligado à CyberLogitec**, uma empresa sul-coreana de software marítimo, separado em listagens por cliente. Ao menos 21 das 38 empresas são clientes documentados dela.
+* A CyDome diz que **não sabe qual sistema foi acessado, como o acesso ocorreu nem quantos dados saíram de cada cliente**, e não conseguiu validar a autenticidade dos arquivos. A CyberLogitec não confirmou incidente, e nenhuma vulnerabilidade nem caminho de exploração foi estabelecido. Estar na lista não prova que a rede da empresa foi invadida.
+
+**Petrobras.** Não há análise técnica pública de botnet, volume de tráfego ou ferramenta. A empresa diz que os sites ficam em servidores externos e que não houve acesso interno. A única pista de método vem do histórico do apelido "Azael": reportagens de 2025 descrevem seu modus operandi como tentativas de derrubar sites por **negação de serviço (DDoS)**, em que o alvo é sobrecarregado de tráfego, com sucessos nem sempre comprovados. Isso é histórico do apelido, e não prova como foi o caso de novembro.
+
+**Polícia Civil de SP.** Nada sobre método. O que existe são capturas de tela do grupo, que não comprovam acesso, e a negativa da Secretaria da Segurança.
+
+**O que é comum a todos:** nenhuma ferramenta, família de malware ou CVE foi divulgada. Esse tipo de detalhe costuma aparecer depois, em perícias ou em relatórios de empresas de segurança.
+
+## 6. O passo a passo, como teoria
+
+**Aviso:** o que segue é um modelo **teórico**, montado a partir do que cada caso revelou e do que o governo diz ver em campanhas contra órgãos públicos. Ele **não** descreve o que aconteceu de fato. Fica em nível geral, sem detalhes técnicos de como executar.
+
+### As etapas gerais de um ataque
+
+1. **Escolha do alvo e reconhecimento:** o atacante procura quem está exposto ou mal protegido.
+2. **Acesso inicial:** o ponto de entrada. Costuma ser uma credencial roubada, um golpe que leva alguém a abrir algo, uma falha em um sistema exposto ou um fornecedor.
+3. **Permanência e ampliação:** ganha mais acesso e fica na rede sem ser visto.
+4. **Coleta e cópia:** encontra e copia os dados.
+5. **Ação final:** vender os dados, criptografar os sistemas, derrubar um site ou apenas copiar.
+6. **Pressão ou anúncio:** extorquir, anunciar em fórum ou avisar a imprensa.
+
+### O que o governo diz ver em geral
+
+A Recomendação 04/2026 do CTIR Gov alerta para campanhas contra órgãos públicos que usam **engenharia social** (links e arquivos que levam o usuário a executar algo), **roubo de identidades**, exploração de vulnerabilidades e uma **redução do tempo entre o acesso inicial e a cópia dos dados**, com automação. Recomenda dar prioridade a correções em sistemas Microsoft, Cisco, Oracle e SharePoint. Isso descreve o cenário geral, e **não** os casos abaixo.
+
+### Onde cada caso se encaixa
+
+**Tesouro Nacional**
+
+* *Informado:* duas bases acessadas, e a detecção pelo monitoramento da rede.
+* *Teoria:* entrada por credencial ou por falha no portal, depois acesso à base analítica interna e cópia. É só teoria, porque as fontes não dizem como foi.
+
+**Caixa Vida e Previdência**
+
+* *Informado:* cópia de dados cadastrais de 7,6 milhões de pessoas e bloqueio dos "mecanismos usados".
+* *Teoria:* o volume sugere acesso a uma base grande e cópia em massa (etapas 4 e 5). Como a entrada aconteceu é desconhecido.
+
+**Porto de Santos**
+
+* *Informado:* a APS e a investigação interna dizem que o vírus já estava na rede antes da queda de energia, técnicos acharam um malware no sábado seguinte, há relato de pedido de resgate não pago, e cerca de 70% dos backups foram recuperados.
+* *Teoria:* o acesso inicial e a permanência (etapas 2 e 3) vieram antes da queda de energia, e a reinicialização dos servidores foi o gatilho ou o momento em que o problema apareceu (etapa 5), seguida de extorsão (etapa 6). Quando e como o invasor entrou é desconhecido, e a hipótese de falha elétrica sem invasão, defendida pelo presidente da APS em um primeiro momento, também não está descartada nas fontes.
+
+**Portos privados (n0n)**
+
+* *Informado:* a CyDome vê indício de um único acervo de suporte de um fornecedor, e o grupo extorquiu com prazo e lista pública.
+* *Teoria dos pesquisadores:* o comprometimento de um fornecedor, ou das contas de suporte e acesso remoto dele, serviria de porta para os dados dos clientes, seguido de roubo e extorsão (etapas 2, 4 e 6). A CyDome recomenda revisar as permissões de fornecedores e as credenciais compartilhadas em canais de suporte. **Não está confirmado.**
+
+**Petrobras**
+
+* *Informado:* sites externos lentos e intermitentes, queda de cerca de 50 minutos, hora anunciada antes pelo hacker, e nenhum acesso interno, segundo a empresa.
+* *Teoria:* o padrão, com lentidão e queda de sites públicos em hora marcada, lembra um ataque de sobrecarga de tráfego, que não invade nada (etapa 5, sem as etapas 3 e 4). O histórico do apelido "Azael" aponta na mesma direção. A Petrobras não disse que foi isso, então é só teoria.
+
+**Polícia Civil de SP**
+
+* *Informado:* só a alegação, e a Secretaria da Segurança não achou acesso indevido.
+* *Duas leituras possíveis:* (a) houve acesso por credenciais comprometidas e o grupo copiou o que vendeu, ou (b) o pacote é antigo, reaproveitado ou exagerado. Os dados atuais **não permitem escolher**. Só o inquérito vai dizer.
+
+## 7. Por que tantos ataques?
+
+### Parte do aumento é visibilidade
+
+O CTIR Gov passou a consumir mais fontes de segurança e adotou uma nova taxonomia em 2026, e a LGPD obriga a comunicação de incidentes à ANPD. Ou seja, parte da alta vem de **maior detecção e notificação**, e não só de mais ataques, segundo o [Portal Information Management](https://docmanagement.com.br/05/01/2026/ataques-a-orgaos-publicos-mais-que-triplicam-e-colocam-lgpd-no-centro-da-crise-de-seguranca-digital/). Isso ajuda a explicar por que os casos aparecem tanto.
+
+### Mas os números também são altos
+
+* O governo federal registrou, em 2026, uma média de **45 incidentes por dia**, segundo o CTIR Gov, citado pelo O Globo (fonte secundária).
+* As notificações de ataques a órgãos públicos **mais que triplicaram** em um ano, segundo o mesmo portal.
+* O Brasil sofreu **487 mil ataques DDoS** no primeiro semestre de 2026, segundo o [Olhar Digital](https://olhardigital.com.br/2026/11/05/seguranca/brasil-sofre-487-mil-ataques-ddos-no-1o-semestre-de-2026-veja-dados/). O setor governamental concentrou 26,5% dos ataques bloqueados, segundo a Kaspersky, via [SBT News](https://sbtnews.sbt.com.br/noticia/brasil/de-itaipu-ao-porto-de-santos-os-riscos-dos-ciberataques).
+* O Brasil ficou em 6º lugar mundial em reivindicações de ransomware em agosto, com 25 casos, segundo a Kaspersky. Isso mede reivindicações de grupos criminosos, e não o total de ataques.
+
+### O problema estrutural no setor público
+
+O Tribunal de Contas da União (TCU), no [Acórdão 2.829/2026](https://portal.tcu.gov.br/imprensa/noticias/tcu-monitora-medidas-de-seguranca-cibernetica-em-orgaos-federais), aprovado em 14 de outubro, manteve o alerta de **alto risco**:
+
+* **Nenhuma das 239 organizações** avaliadas implementou integralmente as 56 medidas básicas de segurança.
+* O TCU teve dificuldade para comprovar que os controles declarados funcionam de fato, porque o acompanhamento depende de autodeclaração.
+* O acórdão cita limitações nos mecanismos do programa de segurança, falta de critérios para agrupar órgãos e **insuficiência de recursos financeiros**.
+* O tribunal propôs abrir processo para analisar a responsabilidade da alta administração dos órgãos que não cumpriram o que era exigido.
+
+### Falta de coordenação
+
+Uma auditoria anterior do TCU constatou que não existe órgão que consolide as informações de segurança do restante do setor público. Em junho, o tribunal deu ao Gabinete de Segurança Institucional (GSI) 180 dias para concluir e aprovar o **Plano Nacional de Cibersegurança**. A [Capital Digital](https://capitaldigital.com.br/tcu-mantem-alerta-de-alto-risco-cibernetico-enquanto-governo-deixa-agencia-nacional-no-papel/) diz que a estrutura nacional para coordenar e fiscalizar a cibersegurança ainda não existe. Não encontrei o andamento atual do projeto que criaria a agência ou autoridade nacional.
+
+### Dinheiro e gente
+
+* O Brasil destina cerca de **6,4% do orçamento de TI** à cibersegurança, e os gastos ficam **36% abaixo da média internacional**, segundo a Brasscom, via [Teletime](https://teletime.com.br/28/10/2026/investimentos-ciberseguranca-brasscom/). A entidade projeta R$ 126,9 bilhões em cibersegurança entre 2026 e 2029.
+* A falta de profissionais é consenso, mas os números variam muito: de cerca de 140 mil vagas em aberto (ISC²) a 750 mil especialistas necessários (Fortinet).
+* Um relatório da Defesa admitiu que a falta de pessoal e de recursos adiou entregas do sistema de guerra cibernética.
+
+### Fornecedores como elo frágil
+
+Os portos mostram a **dependência de poucos fornecedores**. Se a avaliação da CyDome estiver certa, um único acervo de suporte alimentou dezenas de listagens. Em maio, o CTIR Gov também tratou como ataque à cadeia de suprimentos um incidente com a Dígitro, que fornece sistemas a mais de 150 instituições de governo e segurança pública. Quando um fornecedor cai, dezenas de clientes podem cair juntos.
+
+### Dados que valem dinheiro e interesse externo
+
+CPF, e-mail e chave Pix servem para golpes de engenharia social, e esse é o risco que o próprio Tesouro aponta. A [Cenário Energia](https://cenarioenergia.com.br/2026/05/12/brasil-entra-na-rota-da-guerra-cibernetica-e-acende-alerta-para-infraestrutura-critica-de-energia-e-logistica/) também cita o interesse de grupos hacktivistas e de disputas geopolíticas, o que é uma hipótese de especialistas, e não uma medida.
+
+### O custo
+
+Uma projeção da Vultus, empresa do setor, estima prejuízo de R$ 2,9 trilhões para empresas brasileiras em três anos. É uma projeção privada, sem metodologia completa publicada, e não um dado oficial. O custo médio de uma violação de dados no Brasil chegou a R$ 7,44 milhões em 2026, segundo um levantamento da IBM.
+
+## 8. Mito ou verdade
+
+### "É uma onda de ataques coordenada" — sem evidência
+
+Nenhuma fonte liga os casos entre si. A PF apura uma possível ligação entre Santos e a Petrobras, mas isso é uma verificação, e não um achado.
+
+### "O Tesouro perdeu dinheiro" — não, segundo o órgão
+
+O Tesouro diz que não houve impacto financeiro nem comprometimento de sistemas estruturantes. O risco apontado é de golpes com os dados.
+
+### "O SIAFI e o Tesouro Direto foram hackeados" — sem evidência
+
+As fontes falam do portal e-Serviços e de uma base de consultas internas, sem mencionar esses sistemas.
+
+### "Já se sabe qual vírus ou ferramenta foi usada" — falso
+
+Nenhuma ferramenta, família de malware ou vulnerabilidade foi divulgada em nenhum dos casos.
+
+### "A Polícia Civil de SP foi invadida" — não confirmado
+
+A alegação existe, mas a Secretaria da Segurança diz não ter achado acessos indevidos, e as capturas de tela divulgadas não comprovam o acesso.
+
+### "A Petrobras foi invadida" — não, segundo a empresa
+
+Os sites externos foram alvo de uma tentativa e ficaram lentos por cerca de 50 minutos. A empresa diz que não houve acesso aos sistemas internos nem às operações.
+
+### "O Porto de Santos foi só uma falha elétrica" — as fontes divergem
+
+O presidente da APS atribuiu a pane à queda de energia, mas a nota oficial fala em ataque cibernético, a investigação interna aponta um vírus anterior à queda, e há relato de pedido de resgate.
+
+### "Vai ter apagão cibernético em 17 de novembro" — falso
+
+O boato circula nas redes, mas veículos que citam órgãos oficiais o desmentem. A data vem de uma mistura de um episódio de Os Simpsons com um teste do sistema de alerta de emergência dos EUA, e a Defesa Civil disse que a campanha de kits de emergência não tem relação. Não encontrei um comunicado do ONS especificamente, então a checagem vem de veículos de imprensa.
+
+## 9. O que dá para concluir
+
+Não existe uma explicação única. O quadro que as fontes sustentam combina quatro coisas: **mais visibilidade** (mais detecção e notificação), **mais ataques reais**, **fragilidade estrutural no setor público** (nenhum órgão avaliado cumpre o básico, falta coordenação e dinheiro) e **dependência de fornecedores**.
+
+Os casos de novembro são diferentes entre si: invasões com cópia de dados, uma indisponibilidade com pedido de resgate relatado, uma tentativa contra sites públicos e uma alegação em fórum. O que eles têm em comum não é um autor. É um ambiente em que a base de proteção está incompleta, e em que cada novo incidente encontra poucas barreiras.
+
+Sobre como os ataques foram feitos, a resposta honesta é que ainda não sabemos. Sem ferramenta, sem família de malware e sem vulnerabilidade divulgadas, o que sobra são teorias, e este texto as marca como tal. Sobre quem está por trás, ninguém assumiu a autoria dos casos do Tesouro e da Caixa, e quem reivindicou outros casos, como o bl33dr00t, o "Azael" e o n0n, teve as alegações não confirmadas pelas autoridades. Para o cidadão, o conselho prático é o do próprio Tesouro: desconfiar de contatos inesperados que citem seus dados.
+
+## Fontes
+
+**Tesouro Nacional**
+
+* [Tecnoblog: Tesouro alerta para vazamento de dados e chaves Pix](https://tecnoblog.net/noticias/tesouro-nacional-alerta-para-vazamento-de-dados-pessoais-e-chaves-pix/)
+* [CNN Brasil: Tesouro identifica acesso indevido a 30 mil cadastros e 4 mil chaves Pix](https://www.cnnbrasil.com.br/economia/money/macroeconomia/tesouro-identifica-acesso-indevido-a-30-mil-cadastros-e-4-mil-chaves-pix/)
+* [Brasil 247: Tesouro sofre ataque e tem dados acessados](https://www.brasil247.com/brasilia/tesouro-nacional-sofre-ataque-cibernetico-e-tem-dados-de-usuarios-acessados/)
+* [Braining: ataque ao Tesouro, o que se sabe](https://www.braining.com.br/2026/11/13/ataque-hacker-ao-tesouro-o-que-se-sabe-ate-agora/)
+* [Gazeta do Povo: incidente no Tesouro](https://www.gazetadopovo.com.br/republica/incidente-no-tesouro-nacional-expoe-dados-de-30-mil-cadastros-e-4-mil-chaves-pix/)
+
+**Outros casos**
+
+* [Convergência Digital: depois do Porto de Santos, ataques miram órgãos do governo](https://convergenciadigital.com.br/governo/depois-do-porto-de-santos-ataques-hackers-miram-orgaos-do-governo-e-atingem-tesouro-nacional-petrobras-e-caixa/)
+* [Olhar Digital: Caixa, Petrobras e Tesouro em menos de 24h](https://olhardigital.com.br/2026/11/13/seguranca/seus-dados-estao-seguros-caixa-petrobras-e-tesouro-sofrem-ataques-ciberneticos-em-menos-de-24h)
+* [Agência Brasil: Caixa Seguridade informa ataque e vazamento](https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-seguridade-informa-ataque-cibernetico-e-vazamento-de-dados)
+* [Folha BV: ataque à Caixa Vida e Previdência](https://www.folhabv.com.br/cotidiano/ataque-hacker-a-caixa-vida-e-previdencia-expoe-dados-de-76-milhoes-de-clientes/)
+* [A Tribuna: ataque a sites da Petrobras e o Porto de Santos](https://www.atribuna.com.br/noticias/policia/ataque-hacker-a-sites-da-petrobras-e-confirmado-autor-tambem-seria-responsavel-por-colapso-digital-no-porto-de-santos-1.536592)
+* [BoletimSec: venda de 22 mil credenciais da Polícia Civil de SP](https://boletimsec.com/cibercriminosos-anunciam-venda-de-22-mil-credenciais-da-policia-civil-de-sp/)
+* [Oficina da Net: Polícia Civil de SP sofre suposto ataque](https://www.oficinadanet.com.br/seguranca/74032-policia-civil-de-sao-paulo-investiga-ataque-hacker)
+
+**Porto de Santos e portos privados**
+
+* [Gazeta do Povo: como foi o resgate de dados no porto](https://www.gazetadopovo.com.br/brasil/ataque-hacker-porto-de-santos-operacao-resgate-servidores/)
+* [111 Next: Porto de Santos confirma pedido de resgate](https://br.111next.com/2026/11/12/porto-de-santos-confirma-recebimento-de-pedido-de-resgate-apos-ataque-hacker)
+* [Minuto da Segurança: malware oculto e investigação](https://minutodaseguranca.blog.br/ataque-porto-santos-malware-investigacao-2026/)
+* [Cydome: o incidente do n0n e o fornecedor único](https://cydome.io/n0n-cyber-extortion-incident-involving-38-maritime-companies-likely-traces-back-to-a-single-vendor/)
+* [Smart Maritime Network: 38 organizações e US$ 1,22 bilhão em pedidos](https://smartmaritimenetwork.com/2026/10/20/cyber-group-lists-38-maritime-organisations-with-1-22bn-in-ransom-demands/)
+* [Imasters: o risco técnico por trás do ataque a portos](https://imasters.com.br/tecnologia/ataque-a-cadeia-de-suprimentos-expoe-o-elo-fragil-da-infraestrutura-critica-bras)
+
+**Segurança da infraestrutura no Brasil**
+
+* [TCU: monitoramento de medidas de segurança cibernética em órgãos federais](https://portal.tcu.gov.br/imprensa/noticias/tcu-monitora-medidas-de-seguranca-cibernetica-em-orgaos-federais)
+* [Capital Digital: TCU mantém alerta de alto risco](https://capitaldigital.com.br/tcu-mantem-alerta-de-alto-risco-cibernetico-enquanto-governo-deixa-agencia-nacional-no-papel/)
+* [Portal Information Management: ataques a órgãos públicos mais que triplicam](https://docmanagement.com.br/05/01/2026/ataques-a-orgaos-publicos-mais-que-triplicam-e-colocam-lgpd-no-centro-da-crise-de-seguranca-digital/)
+* [Olhar Digital: 487 mil ataques DDoS no primeiro semestre](https://olhardigital.com.br/2026/11/05/seguranca/brasil-sofre-487-mil-ataques-ddos-no-1o-semestre-de-2026-veja-dados/)
+* [SBT News: de Itaipu ao Porto de Santos](https://sbtnews.sbt.com.br/noticia/brasil/de-itaipu-ao-porto-de-santos-os-riscos-dos-ciberataques)
+* [Teletime: Brasscom e o investimento em cibersegurança](https://teletime.com.br/28/10/2026/investimentos-ciberseguranca-brasscom/)
+* [Cenário Energia: o Brasil na rota da guerra cibernética](https://cenarioenergia.com.br/2026/05/12/brasil-entra-na-rota-da-guerra-cibernetica-e-acende-alerta-para-infraestrutura-critica-de-energia-e-logistica/)
+* [GSI: Recomendação 04/2026 do CTIR Gov](https://www.gov.br/gsi/pt-br/assuntos/ctir/recomendacoes/2026/recomendacao-04-2026)

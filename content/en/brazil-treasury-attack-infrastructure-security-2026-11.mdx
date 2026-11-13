@@ -1,0 +1,276 @@
+---
+title: "The attack on Brazil's National Treasury and infrastructure security: why so many attacks?"
+description: "The National Treasury, Caixa, Petrobras, the São Paulo Civil Police, and the Port of Santos in one week. What's known about each case, what isn't known about how they were done, who claimed them, and why Brazil is so exposed."
+date: 2026-11-13
+lang: en
+translationKey: "ataque-tesouro-infraestrutura-brasil-2026-11"
+tags: [cybersecurity, brazil, national-treasury, critical-infrastructure, hacker-attacks]
+draft: false
+---
+
+In less than two weeks, Brazil read headlines about cyberattacks on the National Treasury, Caixa, Petrobras, the São Paulo Civil Police, and the Port of Santos. From the outside, it looks like a coordinated wave. The sources don't support that. What they show is a set of different incidents, in different places, that reached the public almost together, and a structural weakness that helps explain why so many of them succeed.
+
+This article lays out what's known about each case, separates what was disclosed about **how** the attacks happened (almost nothing), builds theories marked as theories, and analyzes why Brazil is so exposed. One rule applies: **we only call someone the author of an attack if that person or group claimed responsibility.** Those who claim appear as people who claim, and the claims appear as unconfirmed.
+
+<Summary title="Quick summary">
+The National Treasury confirmed improper access to two databases: about 30,000 registrations and 4,000 Pix keys, with no financial loss declared. In the same period came Caixa Vida e Previdência (7.6 million customers), the Port of Santos, an attempt against Petrobras's websites, and a claim of credentials for sale from the São Paulo Civil Police. In no case were the entry method, the tool, or the vulnerability disclosed. No source links the cases to each other. An audit by the TCU, Brazil's federal audit court, shows that none of the 239 agencies assessed meets the 56 basic security measures, and there's a lack of money, people, and coordination.
+</Summary>
+
+*Written on November 13, 2026. The cases are ongoing and may change.*
+
+## 1. The attack on the National Treasury
+
+What the National Treasury Secretariat (STN) confirmed, according to [Tecnoblog](https://tecnoblog.net/noticias/tesouro-nacional-alerta-para-vazamento-de-dados-pessoais-e-chaves-pix/) and [CNN Brasil](https://www.cnnbrasil.com.br/economia/money/macroeconomia/tesouro-identifica-acesso-indevido-a-30-mil-cadastros-e-4-mil-chaves-pix/):
+
+* The agency identified, on **November 4**, improper access to two databases. The case was only made public on **November 12**, eight days later. The Treasury attributes the gap to the time needed to detect and confirm the incident, carry out internal investigations, and contain the damage.
+* One database is the **e-Serviços** portal, with about **30,000 registrations**. Names, CPF tax IDs, and emails were accessed. The other is an internal analytical query tool that held about **4,000 Pix keys** of recipients of federal payments.
+* The agency says **there was no financial impact and no compromise of core systems**. The access was cut off, and the case was reported to the National Data Protection Authority (ANPD) and to CTIR Gov, the federal government's incident response center.
+* The risk pointed out is **scams**: with a name, CPF, and email, a scammer can build more convincing messages. [Brasil 247](https://www.brasil247.com/brasilia/tesouro-nacional-sofre-ataque-cibernetico-e-tem-dados-de-usuarios-acessados/) notes that having a Pix key exposed doesn't mean anyone managed to move money.
+
+**What isn't known:** how the intruder got in, who it was, and how far the access went. No source reports a claim of responsibility.
+
+**Divergences:**
+
+* One source speaks of about 34,000 users, and the others of 30,000.
+* Tecnoblog dates the incident in December 2025, which contradicts the others. The November 4 date is the most consistent, but it's worth checking.
+* No source mentions SIAFI or Tesouro Direto. There's no evidence they were affected.
+
+**One point that stands out:** the Pix keys were in an **internal analytical query database**, not in the main system. Databases like that tend to accumulate sensitive data for analysis and, in many places, get less protection than the production system. This is our observation, not a conclusion of the sources.
+
+## 2. One week, several different cases
+
+According to [Convergência Digital](https://convergenciadigital.com.br/governo/depois-do-porto-de-santos-ataques-hackers-miram-orgaos-do-governo-e-atingem-tesouro-nacional-petrobras-e-caixa/) and [Olhar Digital](https://olhardigital.com.br/2026/11/13/seguranca/seus-dados-estao-seguros-caixa-petrobras-e-tesouro-sofrem-ataques-ciberneticos-em-menos-de-24h), the cases that became public were:
+
+* **National Treasury (November 4):** the case described above.
+* **Port of Santos (November 6):** the Santos Port Authority (APS) systems down after a power outage, with a Federal Police inquiry. Operations, according to the authority, continued through contingency measures.
+* **Caixa Vida e Previdência (November 6):** Caixa Seguridade reported the copying of registration data of **7.6 million** customers and former customers: names, CPFs, and, in some records, addresses, phone numbers, emails, and birth dates. The company says there's no sign of compromise of financial data, balances, or passwords, says it blocked the mechanisms used, and hired forensic experts, according to [Agência Brasil](https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-seguridade-informa-ataque-cibernetico-e-vazamento-de-dados). The access was identified on November 6, ANPD was notified on the 11th, and the market learned on the 12th.
+* **São Paulo Civil Police (claim announced on November 7):** see section 3.
+* **Petrobras (November 11):** the company confirmed an attempted attack against its external website and the Agência Petrobras portal, with slowness and instability. According to A Tribuna, the sites were offline for about 50 minutes. Petrobras says the pages sit on external servers, with no connection to its internal systems, and that there was no access or impact on systems and operations.
+* **Private ports (October):** on October 12, a group called n0n listed dozens of maritime companies and demanded amounts that add up to about $1.22 billion. See section 5.
+
+**An important caution:** no source links these cases to each other. One of them says the reports came "with no indication of a relationship between the cases." The Federal Police is looking into whether the port attack and the Petrobras one are connected, but that's still a check, not a conclusion.
+
+There's a difference the public often loses sight of. Some cases were **intrusions** with data copying (Treasury, Caixa). One was **system unavailability** with a reported ransom demand (Santos). One was an **attempt that took public websites down** for a short time (Petrobras). And one is a **claim** that still needs confirmation (Civil Police). Calling everything a "hacker attack" mixes very different things.
+
+## 3. The São Paulo Civil Police case
+
+Extra care is needed here, because **it's still a claim**.
+
+* On November 7, a profile called **bl33dr00t** announced, on a criminal forum, the sale of about **22,000 credentials** from the São Paulo Civil Police for **$40,000**. The profile says it obtained administrative access to the servers of the **Identification Institute (IIRGD)**, the **Phoenix** system, and the force's **SharePoint**, according to [BoletimSec](https://boletimsec.com/cibercriminosos-anunciam-venda-de-22-mil-credenciais-da-policia-civil-de-sp/) and [Oficina da Net](https://www.oficinadanet.com.br/seguranca/74032-policia-civil-de-sao-paulo-investiga-ataque-hacker).
+* The **Public Security Secretariat** says it checked the environments mentioned and **found no improper access** to the databases. A police inquiry was opened.
+* The screenshots released by the group show platform interfaces but **don't prove** administrative privileges or the extraction of the credentials. The authenticity of the package also hadn't been confirmed as of November 10.
+* TecMundo tried to contact the group, with no reply. The same profile had already claimed, in July, the intrusion of the website of the Morrinhos (GO) city hall, which was limited to the page, with no confirmation of access to data.
+
+Here there's a claim, and bl33dr00t is the one making it. Even so, announcing a sale doesn't prove an intrusion. On criminal forums, listings with old, recycled, or exaggerated packages are well known. Only the inquiry will say.
+
+## 4. Who claimed what
+
+* **São Paulo Civil Police:** the profile **bl33dr00t**, on a forum, on November 7. Unconfirmed claim.
+* **Port of Santos:** someone using the alias **"Azael"** reportedly said they carried out the attack, according to [A Tribuna](https://www.atribuna.com.br/noticias/policia/ataque-hacker-a-sites-da-petrobras-e-confirmado-autor-tambem-seria-responsavel-por-colapso-digital-no-porto-de-santos-1.536592). The Federal Police is looking into this claim. Reports also say APS received a ransom demand from a group that tried to negotiate, with no name consistently disclosed.
+* **Petrobras:** the same "Azael" told the press by email, beforehand, that the site would go down at 2:10 p.m., and the page showed instability around 2:15 p.m. The Federal Police is checking for a link to the port case. One report says the police also opened an inquiry into a hacker with the same alias against institutions in Tocantins, but **there's no confirmation** that it's the same person or that "Azael" carried out the attacks.
+* **Private ports (October):** the group **n0n**, which listed the companies on its leak site.
+* **National Treasury and Caixa:** no group has claimed responsibility, in the sources I found.
+
+It's worth remembering what the Santos Port Authority said: claiming responsibility is a common practice among cybercriminals and, on its own, doesn't prove an attack.
+
+## 5. What's known about how the attacks were done
+
+The short answer is: **almost nothing**. In none of the cases did the authorities or companies disclose the entry method, the tool, the malware family, or a vulnerability (CVE). What follows is the public information that exists, case by case.
+
+**National Treasury.** No vector, vulnerability, or tool has been disclosed. The agency only says the intrusion was detected by the security mechanisms and network monitoring, which allowed the access to be cut off, and that it adopted additional protection measures. There's no confirmation that passwords or access credentials were compromised.
+
+**Caixa Vida e Previdência.** There's no detail about an API, credential, or vulnerability. The company says it "blocked the mechanisms used in the attack," without saying which, and that it found no evidence of password leakage. The external forensic investigation is underway. Only the result is public: copying of registration data.
+
+**Port of Santos.** It's the case with the most clues, but none about tools.
+
+* [Gazeta do Povo](https://www.gazetadopovo.com.br/brasil/ataque-hacker-porto-de-santos-operacao-resgate-servidores/) says the case has **characteristics of ransomware**, a type of attack in which files are encrypted and the criminal charges to return them, with no official confirmation. A security blog, [Minuto da Segurança](https://minutodaseguranca.blog.br/ataque-porto-santos-malware-investigacao-2026/), states that, as of November 11, there wasn't enough public information to determine the vector, the malware family, the vulnerability, ransomware, or a group.
+* According to reports, like that of [111 Next](https://br.111next.com/2026/11/12/porto-de-santos-confirma-recebimento-de-pedido-de-resgate-apos-ataque-hacker), APS **received a ransom demand**, the group tried to negotiate, and the authority **did not pay**.
+* This conflicts with the APS president's statement that the systems were interrupted after the power outage, with no clear signs of intrusion. APS's own official note, though, speaks of a "cyberattack."
+* On the recovery: according to Gazeta, servers and backups were taken to São Paulo and an emergency operation was carried out by HP, the data supplier. The available excerpt doesn't detail the technical steps. APS said it recovered about 70% of the file backups by November 12, and the outlets themselves caution that this doesn't mean 70% of the systems are working.
+
+**Private ports (n0n).** Here the public information is richer, and it comes from the maritime security firm CyDome.
+
+* The n0n group surfaced on **September 18**, listed 38 organizations on October 12 (CyDome cited 37 in an earlier notice), with a payment deadline on October 19 and demands totaling about **$1.22 billion**. CyDome notes the group has followed through on earlier deadline threats, replacing anonymous listings with real names. ([Cydome](https://cydome.io/n0n-cyber-extortion-incident-involving-38-maritime-companies-likely-traces-back-to-a-single-vendor/), [Smart Maritime Network](https://smartmaritimenetwork.com/2026/10/20/cyber-group-lists-38-maritime-organisations-with-1-22bn-in-ransom-demands/))
+* CyDome's assessment is that the data probably came from **a single support and project archive linked to CyberLogitec**, a South Korean maritime software company, split into listings per customer. At least 21 of the 38 companies are documented customers of it.
+* CyDome says it **doesn't know which system was accessed, how the access occurred, or how much data left each customer**, and it couldn't validate the authenticity of the files. CyberLogitec hasn't confirmed an incident, and no vulnerability or exploitation path has been established. Being on the list doesn't prove that the company's own network was breached.
+
+**Petrobras.** There's no public technical analysis of a botnet, traffic volume, or tool. The company says the sites sit on external servers and that there was no internal access. The only clue about method comes from the alias "Azael's" history: 2025 reports describe its modus operandi as attempts to take sites down through **denial of service (DDoS)**, in which the target is overloaded with traffic, with successes not always proven. That's the alias's history, and it doesn't prove how the November case went.
+
+**São Paulo Civil Police.** Nothing about method. What exists are the group's screenshots, which don't prove access, and the Public Security Secretariat's denial.
+
+**What they all have in common:** no tool, malware family, or CVE has been disclosed. That kind of detail usually shows up later, in forensic reports or in reports from security companies.
+
+## 6. The step by step, as theory
+
+**Notice:** what follows is a **theoretical** model, built from what each case revealed and from what the government says it sees in campaigns against public agencies. It does **not** describe what actually happened. It stays at a general level, with no technical detail on how to carry anything out.
+
+### The general stages of an attack
+
+1. **Choosing the target and reconnaissance:** the attacker looks for who is exposed or poorly protected.
+2. **Initial access:** the point of entry. It's usually a stolen credential, a scam that gets someone to open something, a flaw in an exposed system, or a supplier.
+3. **Persistence and expansion:** it gains more access and stays on the network unseen.
+4. **Collection and copying:** it finds and copies the data.
+5. **Final action:** selling the data, encrypting the systems, taking a site down, or simply copying.
+6. **Pressure or announcement:** extorting, announcing on a forum, or alerting the press.
+
+### What the government says it sees in general
+
+CTIR Gov's Recommendation 04/2026 warns of campaigns against public agencies that use **social engineering** (links and files that get the user to run something), **identity theft**, exploitation of vulnerabilities, and a **shorter time between initial access and data copying**, with automation. It recommends prioritizing fixes for Microsoft, Cisco, Oracle, and SharePoint systems. That describes the general picture, **not** the cases below.
+
+### Where each case fits
+
+**National Treasury**
+
+* *Reported:* two databases accessed, and detection by network monitoring.
+* *Theory:* entry through a credential or a flaw in the portal, then access to the internal analytical database and copying. It's only theory, because the sources don't say how it went.
+
+**Caixa Vida e Previdência**
+
+* *Reported:* copying of registration data of 7.6 million people and the blocking of the "mechanisms used."
+* *Theory:* the volume suggests access to a large database and mass copying (stages 4 and 5). How the entry happened is unknown.
+
+**Port of Santos**
+
+* *Reported:* APS and the internal investigation say the virus was already on the network before the power outage, technicians found a malware the following Saturday, there's a report of an unpaid ransom demand, and about 70% of the backups were recovered.
+* *Theory:* the initial access and persistence (stages 2 and 3) came before the power outage, and the restart of the servers was the trigger or the moment the problem surfaced (stage 5), followed by extortion (stage 6). When and how the intruder got in is unknown, and the hypothesis of an electrical failure with no intrusion, defended by the APS president at first, isn't ruled out in the sources either.
+
+**Private ports (n0n)**
+
+* *Reported:* CyDome sees signs of a single support archive from a supplier, and the group extorted with a deadline and a public list.
+* *Researchers' theory:* the compromise of a supplier, or of its support and remote access accounts, would serve as a door to the customers' data, followed by theft and extortion (stages 2, 4, and 6). CyDome recommends reviewing supplier permissions and credentials shared through support channels. **It isn't confirmed.**
+
+**Petrobras**
+
+* *Reported:* external sites slow and intermittent, an outage of about 50 minutes, a time announced beforehand by the hacker, and no internal access, according to the company.
+* *Theory:* the pattern, with slowness and public sites going down at a set time, resembles a traffic overload attack, which doesn't break into anything (stage 5, without stages 3 and 4). The alias "Azael's" history points the same way. Petrobras didn't say that's what it was, so it's only theory.
+
+**São Paulo Civil Police**
+
+* *Reported:* only the claim, and the Public Security Secretariat found no improper access.
+* *Two possible readings:* (a) there was access through compromised credentials and the group copied what it sold, or (b) the package is old, recycled, or exaggerated. The current data **doesn't allow choosing**. Only the inquiry will say.
+
+## 7. Why so many attacks?
+
+### Part of the increase is visibility
+
+CTIR Gov started consuming more security feeds and adopted a new taxonomy in 2026, and Brazil's data protection law (LGPD) requires incidents to be reported to ANPD. In other words, part of the rise comes from **greater detection and reporting**, not only from more attacks, according to [Portal Information Management](https://docmanagement.com.br/05/01/2026/ataques-a-orgaos-publicos-mais-que-triplicam-e-colocam-lgpd-no-centro-da-crise-de-seguranca-digital/). That helps explain why the cases show up so much.
+
+### But the numbers are also high
+
+* The federal government recorded, in 2026, an average of **45 incidents per day**, according to CTIR Gov, cited by O Globo (secondary source).
+* Reports of attacks on public agencies **more than tripled** in a year, according to the same portal.
+* Brazil suffered **487,000 DDoS attacks** in the first half of 2026, according to [Olhar Digital](https://olhardigital.com.br/2026/11/05/seguranca/brasil-sofre-487-mil-ataques-ddos-no-1o-semestre-de-2026-veja-dados/). The government sector concentrated 26.5% of the blocked attacks, according to Kaspersky, via [SBT News](https://sbtnews.sbt.com.br/noticia/brasil/de-itaipu-ao-porto-de-santos-os-riscos-dos-ciberataques).
+* Brazil ranked 6th worldwide in ransomware claims in August, with 25 cases, according to Kaspersky. That measures claims by criminal groups, not the total number of attacks.
+
+### The structural problem in the public sector
+
+The Federal Audit Court (TCU), in [Ruling 2,829/2026](https://portal.tcu.gov.br/imprensa/noticias/tcu-monitora-medidas-de-seguranca-cibernetica-em-orgaos-federais), approved on October 14, maintained the **high risk** alert:
+
+* **None of the 239 organizations** assessed fully implemented the 56 basic security measures.
+* The TCU had difficulty proving that the declared controls actually work, because the monitoring depends on self-declaration.
+* The ruling cites limitations in the security program's mechanisms, a lack of criteria for grouping agencies, and **insufficient financial resources**.
+* The court proposed opening a proceeding to examine the responsibility of the top management of agencies that didn't deliver what was required.
+
+### Lack of coordination
+
+An earlier TCU audit found that there's no body that consolidates security information for the rest of the public sector. In June, the court gave the Institutional Security Office (GSI) 180 days to complete and approve the **National Cybersecurity Plan**. [Capital Digital](https://capitaldigital.com.br/tcu-mantem-alerta-de-alto-risco-cibernetico-enquanto-governo-deixa-agencia-nacional-no-papel/) says the national structure to coordinate and oversee cybersecurity still doesn't exist. I didn't find the current status of the bill that would create the national agency or authority.
+
+### Money and people
+
+* Brazil allocates about **6.4% of the IT budget** to cybersecurity, and spending is **36% below the international average**, according to Brasscom, via [Teletime](https://teletime.com.br/28/10/2026/investimentos-ciberseguranca-brasscom/). The association projects R$126.9 billion in cybersecurity spending between 2026 and 2029.
+* The shortage of professionals is a consensus, but the numbers vary widely: from about 140,000 open positions (ISC²) to 750,000 specialists needed (Fortinet).
+* A Defense report admitted that the lack of personnel and resources delayed deliveries of the cyberwarfare system.
+
+### Suppliers as the weak link
+
+The ports show the **dependence on a few suppliers**. If CyDome's assessment is right, a single support archive fed dozens of listings. In May, CTIR Gov also treated an incident with Dígitro as a supply chain attack; it supplies systems to more than 150 government and public security institutions. When a supplier falls, dozens of customers can fall together.
+
+### Data worth money and outside interest
+
+CPF, email, and Pix key serve social engineering scams, and that's the risk the Treasury itself points to. [Cenário Energia](https://cenarioenergia.com.br/2026/05/12/brasil-entra-na-rota-da-guerra-cibernetica-e-acende-alerta-para-infraestrutura-critica-de-energia-e-logistica/) also cites the interest of hacktivist groups and geopolitical disputes, which is a hypothesis from experts, not a measurement.
+
+### The cost
+
+A projection by Vultus, a company in the sector, estimates losses of R$2.9 trillion for Brazilian companies over three years. It's a private projection, with no full methodology published, not official data. The average cost of a data breach in Brazil reached R$7.44 million in 2026, according to an IBM survey.
+
+## 8. Myth or fact
+
+### "It's a coordinated wave of attacks" — no evidence
+
+No source links the cases to each other. The Federal Police is looking into a possible link between Santos and Petrobras, but that's a check, not a finding.
+
+### "The Treasury lost money" — no, according to the agency
+
+The Treasury says there was no financial impact and no compromise of core systems. The risk pointed out is scams using the data.
+
+### "SIAFI and Tesouro Direto were hacked" — no evidence
+
+The sources talk about the e-Serviços portal and an internal query database, without mentioning those systems.
+
+### "We already know which virus or tool was used" — false
+
+No tool, malware family, or vulnerability has been disclosed in any of the cases.
+
+### "The São Paulo Civil Police was breached" — unconfirmed
+
+The claim exists, but the Public Security Secretariat says it found no improper access, and the screenshots released don't prove access.
+
+### "Petrobras was breached" — no, according to the company
+
+The external sites were the target of an attempt and were slow for about 50 minutes. The company says there was no access to internal systems or operations.
+
+### "The Port of Santos was just an electrical failure" — the sources diverge
+
+The APS president attributed the outage to the power cut, but the official note speaks of a cyberattack, the internal investigation points to a virus predating the outage, and there's a report of a ransom demand.
+
+### "There will be a cyber blackout on November 17" — false
+
+The rumor circulates on social media, but outlets citing official bodies deny it. The date comes from a mix of an episode of The Simpsons with a test of the US emergency alert system, and Civil Defense said its emergency kit campaign has no relation. I didn't find a statement from ONS, the grid operator, specifically, so the check comes from press outlets.
+
+## 9. What you can conclude
+
+There's no single explanation. The picture the sources support combines four things: **more visibility** (more detection and reporting), **more real attacks**, **structural weakness in the public sector** (no agency assessed meets the basics, and there's a lack of coordination and money), and **dependence on suppliers**.
+
+The November cases are different from each other: intrusions with data copying, an unavailability with a reported ransom demand, an attempt against public sites, and a claim on a forum. What they have in common isn't an author. It's an environment where the baseline of protection is incomplete, and where each new incident meets few barriers.
+
+On how the attacks were done, the honest answer is that we don't know yet. With no tool, no malware family, and no vulnerability disclosed, what's left are theories, and this text marks them as such. On who's behind it, nobody has claimed responsibility for the Treasury and Caixa cases, and those who claimed other cases, like bl33dr00t, "Azael," and n0n, have had their claims unconfirmed by the authorities. For citizens, the practical advice is the Treasury's own: be wary of unexpected contacts that cite your data.
+
+## Sources
+
+**National Treasury**
+
+* [Tecnoblog: Treasury warns of leak of personal data and Pix keys](https://tecnoblog.net/noticias/tesouro-nacional-alerta-para-vazamento-de-dados-pessoais-e-chaves-pix/)
+* [CNN Brasil: Treasury identifies improper access to 30,000 registrations and 4,000 Pix keys](https://www.cnnbrasil.com.br/economia/money/macroeconomia/tesouro-identifica-acesso-indevido-a-30-mil-cadastros-e-4-mil-chaves-pix/)
+* [Brasil 247: Treasury suffers attack and has data accessed](https://www.brasil247.com/brasilia/tesouro-nacional-sofre-ataque-cibernetico-e-tem-dados-de-usuarios-acessados/)
+* [Braining: attack on the Treasury, what we know](https://www.braining.com.br/2026/11/13/ataque-hacker-ao-tesouro-o-que-se-sabe-ate-agora/)
+* [Gazeta do Povo: incident at the Treasury](https://www.gazetadopovo.com.br/republica/incidente-no-tesouro-nacional-expoe-dados-de-30-mil-cadastros-e-4-mil-chaves-pix/)
+
+**Other cases**
+
+* [Convergência Digital: after the Port of Santos, attacks target government bodies](https://convergenciadigital.com.br/governo/depois-do-porto-de-santos-ataques-hackers-miram-orgaos-do-governo-e-atingem-tesouro-nacional-petrobras-e-caixa/)
+* [Olhar Digital: Caixa, Petrobras, and Treasury in under 24 hours](https://olhardigital.com.br/2026/11/13/seguranca/seus-dados-estao-seguros-caixa-petrobras-e-tesouro-sofrem-ataques-ciberneticos-em-menos-de-24h)
+* [Agência Brasil: Caixa Seguridade reports attack and leak](https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-seguridade-informa-ataque-cibernetico-e-vazamento-de-dados)
+* [Folha BV: attack on Caixa Vida e Previdência](https://www.folhabv.com.br/cotidiano/ataque-hacker-a-caixa-vida-e-previdencia-expoe-dados-de-76-milhoes-de-clientes/)
+* [A Tribuna: attack on Petrobras sites and the Port of Santos](https://www.atribuna.com.br/noticias/policia/ataque-hacker-a-sites-da-petrobras-e-confirmado-autor-tambem-seria-responsavel-por-colapso-digital-no-porto-de-santos-1.536592)
+* [BoletimSec: sale of 22,000 São Paulo Civil Police credentials](https://boletimsec.com/cibercriminosos-anunciam-venda-de-22-mil-credenciais-da-policia-civil-de-sp/)
+* [Oficina da Net: São Paulo Civil Police suffers alleged attack](https://www.oficinadanet.com.br/seguranca/74032-policia-civil-de-sao-paulo-investiga-ataque-hacker)
+
+**Port of Santos and private ports**
+
+* [Gazeta do Povo: how the data recovery at the port went](https://www.gazetadopovo.com.br/brasil/ataque-hacker-porto-de-santos-operacao-resgate-servidores/)
+* [111 Next: Port of Santos confirms ransom demand](https://br.111next.com/2026/11/12/porto-de-santos-confirma-recebimento-de-pedido-de-resgate-apos-ataque-hacker)
+* [Minuto da Segurança: hidden malware and the investigation](https://minutodaseguranca.blog.br/ataque-porto-santos-malware-investigacao-2026/)
+* [Cydome: the n0n incident and the single supplier](https://cydome.io/n0n-cyber-extortion-incident-involving-38-maritime-companies-likely-traces-back-to-a-single-vendor/)
+* [Smart Maritime Network: 38 organizations and $1.22 billion in demands](https://smartmaritimenetwork.com/2026/10/20/cyber-group-lists-38-maritime-organisations-with-1-22bn-in-ransom-demands/)
+* [Imasters: the technical risk behind the port attack](https://imasters.com.br/tecnologia/ataque-a-cadeia-de-suprimentos-expoe-o-elo-fragil-da-infraestrutura-critica-bras)
+
+**Infrastructure security in Brazil**
+
+* [TCU: monitoring of cybersecurity measures in federal bodies](https://portal.tcu.gov.br/imprensa/noticias/tcu-monitora-medidas-de-seguranca-cibernetica-em-orgaos-federais)
+* [Capital Digital: TCU maintains high-risk alert](https://capitaldigital.com.br/tcu-mantem-alerta-de-alto-risco-cibernetico-enquanto-governo-deixa-agencia-nacional-no-papel/)
+* [Portal Information Management: attacks on public bodies more than triple](https://docmanagement.com.br/05/01/2026/ataques-a-orgaos-publicos-mais-que-triplicam-e-colocam-lgpd-no-centro-da-crise-de-seguranca-digital/)
+* [Olhar Digital: 487,000 DDoS attacks in the first half](https://olhardigital.com.br/2026/11/05/seguranca/brasil-sofre-487-mil-ataques-ddos-no-1o-semestre-de-2026-veja-dados/)
+* [SBT News: from Itaipu to the Port of Santos](https://sbtnews.sbt.com.br/noticia/brasil/de-itaipu-ao-porto-de-santos-os-riscos-dos-ciberataques)
+* [Teletime: Brasscom and cybersecurity investment](https://teletime.com.br/28/10/2026/investimentos-ciberseguranca-brasscom/)
+* [Cenário Energia: Brazil on the cyberwar route](https://cenarioenergia.com.br/2026/05/12/brasil-entra-na-rota-da-guerra-cibernetica-e-acende-alerta-para-infraestrutura-critica-de-energia-e-logistica/)
+* [GSI: CTIR Gov Recommendation 04/2026](https://www.gov.br/gsi/pt-br/assuntos/ctir/recomendacoes/2026/recomendacao-04-2026)
